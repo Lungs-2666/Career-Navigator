@@ -1,3 +1,4 @@
 # Diploma thesis
 
-v0.0.0
+Main branch: master
+Version: 0.0
