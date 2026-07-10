@@ -1,3 +1,7 @@
+/* :root{
+  
+} */
+
 .page {
   width: 100vw;
   height: 100svh;
@@ -8,10 +12,24 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .main{
   width: 100%;
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  background-color: white;
+}
+
+.snip_group{
   flex: 1;
+  min-height: 100vh;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  padding: 50px 40px;
 }

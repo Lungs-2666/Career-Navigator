@@ -7,12 +7,16 @@
     const Home = () => {
         return (
             <div className={styles.page}>
-                <NavBar />
 
                 <main className={styles.main}>
-                    <VacanciesSnippets />
-                    <ResourcesSnippets />
+                    <NavBar />
+                    
+                    <div className={styles.snip_group}>
+                        <VacanciesSnippets />
+                        <ResourcesSnippets />
+                    </div>
                 </main>
+                
             </div>
         );
     }

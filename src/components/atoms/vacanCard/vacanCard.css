@@ -1,0 +1,39 @@
+    .vac_card{
+        width: 350px;
+        height: 300px;
+        background-color: #fcca6e;
+        border: 2px solid #ffa600;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: black;
+        padding: 5px 0px 15px 15px;
+    }
+
+    .card_img{
+        overflow: hidden;
+        border-radius: 10px;
+        opacity: .2; /**/
+    }
+
+    .card_title{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .card_link{
+        border: none;
+        outline: none;
+        background-color: #30912d;
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .2s ease;
+        /* border: 2px solid #21631e; */
+
+            &:hover{
+                background-color: #21631e;
+            }
+    }
