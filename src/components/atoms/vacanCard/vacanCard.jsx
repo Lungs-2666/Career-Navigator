@@ -12,16 +12,15 @@
                         width={300}
                         height={150}
                         className='card_img'
+                        loading='eager'
                     />
 
                     <h3 className='card_title'> {title} </h3>
                     <p className='card_pay'> {pay} </p>
                 </div>
 
-                <Link href={link}>
-                    <button className='card_link'>
+                <Link className='vac_card_link' href={link}>
                         {"See >"}
-                    </button>
                 </Link>
             </div>
         )    

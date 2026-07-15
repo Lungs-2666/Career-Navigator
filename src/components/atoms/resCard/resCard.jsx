@@ -12,13 +12,14 @@
                         height={150}
                         alt='resource_image'
                         className='res_img'
+                        loading='eager'
                     />
                 </div>
 
                 <h3 className='res_title'> {title} </h3>
                 <p className='res_desc'> {descript} </p>
 
-                <Link className='res_card_link' href={link}> {"See >>"} </Link>
+                <Link className='res_card_link' href={link}> {"See >"} </Link>
             </div>
         )
     }

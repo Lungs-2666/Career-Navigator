@@ -31,5 +31,12 @@
         border-radius: 5px;
         cursor: pointer;
         transition: all .2s ease;
+        text-align: center;
+        align-content: center;
+        color: white;
         /* border: 2px solid #21631e; */
+
+            &:hover{
+                background-color: #21631e;
+            }
     }

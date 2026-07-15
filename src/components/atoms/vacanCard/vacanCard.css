@@ -22,7 +22,7 @@
         font-weight: 600;
     }
 
-    .card_link{
+    .vac_card_link{
         border: none;
         outline: none;
         background-color: #30912d;
@@ -31,6 +31,9 @@
         border-radius: 5px;
         cursor: pointer;
         transition: all .2s ease;
+        text-align: center;
+        align-content: center;
+        color: white;
         /* border: 2px solid #21631e; */
 
             &:hover{
