@@ -1,0 +1,74 @@
+    .skillmap_preview{
+        width: 35%;
+        height: 50%;
+        
+        border-radius: 30px;
+        border: 4px solid var(--accent-color);
+        color: var(--text-color);
+        position: relative;
+        z-index: 20;
+        overflow: hidden;
+    }
+
+    .skillmap_preview_bg{
+        width: 102%;
+        height: 102%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background-image: url('/skillmap_prev.png');
+        background-size: cover;
+        background-position: 40% 40%;
+        background-size: 500;
+        filter: blur(1.8);
+        border-radius: 30px;
+
+        animation: PreviewBgMovement 50s linear infinite;
+    }
+
+    .skillmap_preview_link{
+        font-size: 1.2rem;
+        text-decoration: underline;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 20;
+        font-weight: 600;
+    }
+
+    .skillmap_preview_text{
+        font-size: 1.35rem;
+        font-weight: 600;
+        z-index: 20;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 80%;
+        text-align: end;
+        align-content: end;
+        letter-spacing: 0.7px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .skillmap_preview_text p{
+        font-size: 1.2rem;
+    }
+
+
+
+    @keyframes PreviewBgMovement {
+        0% {
+            background-position: 10% 40%;
+        } 25% {
+            background-position: 400% 40%;
+        } 50% {
+            background-position: 800% 40%;
+        } 75% {
+            background-position: 1200% 40%;
+        } 100% {
+            background-position: 1820% 40%;
+        }
+    }
