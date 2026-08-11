@@ -1,22 +1,26 @@
     import styles from "./page.module.css";
 
-    import VacanciesSnippets from "@/components/molecules/vacansiesSnippet/vacSnip";
-    import ResourcesSnippets from "@/components/molecules/resourcesSnippet/resourSnip";
-    import NavBar from "@/components/molecules/navBar/navBar";
+    import VacanciesPreview from "@/components/molecules/vacansiesPreview/vacPrev";
+    import SkillmapPreview from "@/components/molecules/skillmapPreview/skillmapPrev";
+    import AccountPreview from "@/components/molecules/accountPreview/accPrev";
+    import ResourcesPreview from "@/components/molecules/resourcesPreview/resPrev";
+    import WavesBgComponent from "@/components/atoms/wavesBg/wavesBgComp";
+
 
     const Home = () => {
         return (
             <div className={styles.page}>
+                <WavesBgComponent />
 
                 <main className={styles.main}>
-                    <NavBar />
-                    
                     <div className={styles.snip_group}>
-                        <VacanciesSnippets />
-                        <ResourcesSnippets />
+                        <VacanciesPreview />    
+                        <SkillmapPreview />
+                        <AccountPreview />
+                        <ResourcesPreview />
+                        {/* <ResourcesSnippets /> */}
                     </div>
                 </main>
-                
             </div>
         );
     }

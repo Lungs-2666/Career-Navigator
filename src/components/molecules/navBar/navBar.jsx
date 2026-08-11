@@ -1,31 +1,22 @@
     import './navBar.css';
     import Link from 'next/link';
-    import { Settings } from 'lucide-react';
+    import { House, BriefcaseBusiness, BookA, MapPinned, CircleUser, Settings } from 'lucide-react';
     
     const NavBar = () => {
         return (
             <nav className='nav_bar'>
-                <div className='nav_items'>
-                    <Link href={'/vacancies'} className='nav_item'>Vacancies</Link>
-                    <Link href={'/resources'} className='nav_item'>Resources</Link>
-                    <Link href={'/skillmap'}  className='nav_item'>Skill map</Link>
-                    <Link href={'/account'}   className='nav_item'>Account  </Link>
+                <div className='nav_bar_1'>
+                    <Link href='/' className='nav_item' > <House color='#191314' size={24} strokeWidth={1.5} /> </Link>
+                    <Link href='/vacancies' className="nav_item" > <BriefcaseBusiness color='#191314' size={24} strokeWidth={1.5}/> </Link>
+                    <Link href='/resources' className="nav_item" > <BookA color='#191314' size={24} strokeWidth={1.5}/>             </Link>
+                    <Link href='/skillmap' className="nav_item" >  <MapPinned color='#191314' size={24} strokeWidth={1.5}/>         </Link>
                 </div>
-                
-                <button className='settings_btn'>
-                    <Link className='settings_link' href={'/settigs'}>
-                        <Settings 
-                            strokeWidth={1.5}
-                            color='black'
-                            // size={}
-                        />
 
-                        <p>    
-                            Settings {'>>'}
-                        </p>
-                    </Link>
-                </button>
-            </nav>
+                <div className='nav_bar_2'>
+                    <Link href='/account' className="nav_item" >   <CircleUser color='#191314' size={24} strokeWidth={1.5}/>        </Link>
+                    <Link href='/setting' className="nav_item" >   <Settings color='#191314' size={24} strokeWidth={1.5}/>          </Link>
+                </div>
+            </nav>  
         );
     }
 
