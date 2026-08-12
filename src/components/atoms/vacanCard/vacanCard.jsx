@@ -3,21 +3,20 @@
     
     const VacancieCard = ({ title, pay, logo, link }) => {
         return (
-            <div className='vacancies_preview_card'>
-                <div>
-                    <img src={logo} alt="vacancie_logo"/>
+            <div className='vacancie_card'>
+                <img src={logo} alt="vacancie_card_logo"/>
                                     
-                    <div className='card_group_1'>
-                        <h2> {title} </h2>
-                        <p> {pay} </p>
-                    </div>
+                <div className='vacancie_card_group'>
+                    <h2> {title} </h2>
+                    <p> {pay} </p>
+                </div>
+
                 <Link 
                     href={link} 
-                    className='vacancies_preview_card_btn'
-                    
-                > Check vacancie {">"} </Link>
-                
-                </div>
+                    className='vacancie_card_btn'
+                > 
+                    Check vacancie {">"} 
+                </Link>
             </div>
         )
     }
