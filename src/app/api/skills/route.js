@@ -1,33 +1,21 @@
-import { NextResponse } from 'next/server'
-import { connectToDatabase } from '@/lib/mongo'
-
+import { connectToDatabase } from "@/lib/mongo";
 export async function GET() {
-  try {
-    const { db } = await connectToDatabase()
-    const skills = await db.collection('skills').find({}).toArray()
-    return NextResponse.json(skills)
-  } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 })
-  }
-}
+  let { db } = await connectToDatabase()
 
-export async function POST(request) {
-  try {
-    const body = await request.json()
-    const { db } = await connectToDatabase()
-    
-    const result = await db.collection('skills').insertOne({
-      name: body.name,
-      category: body.category || '',
-      demand: body.demand || 0,
-      createdAt: new Date()
-    })
-    
-    return NextResponse.json({ 
-      success: true, 
-      id: result.insertedId 
-    })
-  } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 })
+  let vacs = await db.collection('vacancies').find({}).toArray()
+  let counts = {}
+
+  for (let vac of vacs) {
+    if (!vac.skills) continue
+    for (let skill of vac.skills) {
+      counts[skill] = (counts[skill] || 0) + 1
+    }
   }
+  let result = []
+  for (let name in counts) {
+    result.push({ name, count: counts[name] })
+  }
+  result.sort((a, b) => b.count - a.count)
+
+  return Response.json(result);
 }

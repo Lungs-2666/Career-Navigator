@@ -1,64 +1,50 @@
-import { NextResponse } from 'next/server'
-import { connectToDatabase } from '@/lib/mongo'
-import { ObjectId } from 'mongodb'
+import { connectToDatabase } from "@/lib/mongo";
 
-export async function POST(request) {
-  try {
-    const { jobTitle } = await request.json()
-    const { db } = await connectToDatabase()
 
-    // Ищем вакансии по названию
-    const vacancies = await db.collection('vacancies')
-      .find({ title: { $regex: jobTitle, $options: 'i' } })
-      .toArray()
+export async function GET() {
+  let { db } = await connectToDatabase()
+  let vacs = await db.collection('vacancies').find({}).toArray()
 
-    if (vacancies.length === 0) {
-      return NextResponse.json({ nodes: [], links: [] })
-    }
+  let nodes = []
+  let links = []
+  let skills = new Set()
 
-    // Собираем все skillIds из найденных вакансий
-    const allSkillIds = new Set()
-    vacancies.forEach(v => {
-      if (v.skillIds) {
-        v.skillIds.forEach(id => allSkillIds.add(id.toString()))
-      }
-    })
-
-    // Получаем данные навыков
-    const objectIds = Array.from(allSkillIds).map(id => new ObjectId(id))
-    const skills = await db.collection('skills')
-      .find({ _id: { $in: objectIds } })
-      .toArray()
-
-    // Строим узлы
-    const nodes = skills.map(skill => ({
-      id: skill._id.toString(),
-      label: skill.name,
-      demand: skill.demand || 0
-    }))
-
-    // Строим связи (навыки, которые встречаются вместе в одной вакансии)
-    const links = []
-    const linkSet = new Set()
-
-    vacancies.forEach(vacancy => {
-      const skillIds = vacancy.skillIds || []
-      for (let i = 0; i < skillIds.length - 1; i++) {
-        for (let j = i + 1; j < skillIds.length; j++) {
-          const key = [skillIds[i].toString(), skillIds[j].toString()].sort().join('-')
-          if (!linkSet.has(key)) {
-            linkSet.add(key)
-            links.push({
-              source: skillIds[i].toString(),
-              target: skillIds[j].toString()
-            })
-          }
-        }
-      }
-    })
-
-    return NextResponse.json({ nodes, links })
-  } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 })
+  for (let vac of vacs) {
+    if (!vac.skills) continue
+    for (let skill of vac.skills) skills.add(skill)
   }
+
+  let map = {}
+  let i = 0
+  for (let s of skills) {
+    nodes.push({ id: 1, label: s })
+    map[s] = i
+    i++
+  }
+
+  let pairs = {}
+  for (let vac of vacs) {
+    if (!vac.skills || vac.skills.length < 2) continue
+    for (let a = 0; a < vac.skills.length; a++) {
+      for (let b = a + 1; b < vac.skills.length; b++) {
+        let x = vac.skills[a]
+        let y = vac.skills[b]
+        if (x == y) continue
+        let key = x < y ? x + '|' + y : y + '|' + x
+        pairs[key] = (pairs[key] || 0) + 1
+      }
+    }
+  }
+
+  for (let key in pairs) {
+    let [x, y] = key.split('|')
+    if (pairs[key] > 1) {
+      links.push({
+        source: map[x],
+        target: map[y],
+        weight: pairs[key]
+      })
+    }
+  }
+  return Response.json({ nodes, links  })
 }

@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "eslint",
     "seed": "node scripts/seed.js",
+    "test": "node scripts/test.js",
     "parse": "node scripts/runParser.js",
     "test-parse":"node scripts/test-hh.js"
   },
