@@ -9,7 +9,6 @@
                     <Link href='/' className='nav_item' > <House color='#191314' size={24} strokeWidth={1.5} /> </Link>
                     <Link href='/vacancies' className="nav_item" > <BriefcaseBusiness color='#191314' size={24} strokeWidth={1.5}/> </Link>
                     <Link href='/resources' className="nav_item" > <BookA color='#191314' size={24} strokeWidth={1.5}/>             </Link>
-                    <Link href='/skillmap' className="nav_item" >  <MapPinned color='#191314' size={24} strokeWidth={1.5}/>         </Link>
                 </div>
 
                 <div className='nav_bar_2'>
