@@ -1,42 +1,46 @@
-    .res_card{
-        width: 350px;
+    .resource_card{
+        width: 300px;
         height: 300px;
-        background-color: #fcca6e;
-        border: 2px solid #ffa600;
-        border-radius: 10px;
+        flex-shrink: 0;
+        background-color: var(--foreground);
+        border: 3px solid var(--accent-color);
+        color: var(--text-color);
+        border-radius: 15px;
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        color: black;
-        padding: 5px 0px 15px 15px;
+        padding: 10px;
     }
 
-    .res_img{
-        overflow: hidden;
-        border-radius: 10px;
-        opacity: .2; /**/
+    .resource_card img{
+        width: 100%;
+        height: 160px;
+        /* border: 1px solid red; */
     }
 
-    .res_title{
-        font-size: 1.2rem;
+    .resource_card_group{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resource_card h2{
         font-weight: 600;
+        font-size: 1.2rem;
     }
 
-    .res_card_link{
-        border: none;
-        outline: none;
-        background-color: #30912d;
-        width: 100px;
-        height: 30px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all .2s ease;
+    .resource_card_link{
+        padding: 0px 20px;
+        height: 35px;
+        width: 100%;
         text-align: center;
         align-content: center;
-        color: white;
-        /* border: 2px solid #21631e; */
+        background-color: var(--primary-color);
+        color: var(--text-color-2);
+        border-radius: 5px;
+        cursor: pointer;
 
-            &:hover{
-                background-color: #21631e;
+            &:active{
+                background-color: #2b4238;
             }
     }
