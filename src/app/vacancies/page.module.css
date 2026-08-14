@@ -1,0 +1,9 @@
+.page {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: #e5e5e5;
+    position: fixed;
+    padding-left: 10%;
+
+}   

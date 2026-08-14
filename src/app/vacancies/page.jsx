@@ -4,7 +4,12 @@ import styles from './page.module.css'
 const Page = () => {
 
     return (
-        <div></div>
+        <div className={styles.page}
+        >
+
+
+                <p>sdfsfdfsdf</p>..авыа.
+        </div>
     )
 
 }
