@@ -1,0 +1,331 @@
+[
+    {
+        "title": "UI/UX дизайнер",
+        "company": "Яндекс",
+        "salaryMin": 180000,
+        "salaryMax": 280000,
+        "currency": "RUB",
+        "description": "Дизайн мобильных экранов. Нужен опыт в Figma, прототипировании. Гибкий график.",
+        "url": "https://hh.ru/vacancy/100001",
+        "source": "hh.ru",
+        "skills": [
+            "Figma",
+            "UI",
+            "UX",
+            "Prototyping"
+        ],
+        "createdAt": "05.08.26"
+    },
+    {
+        "title": "Графический дизайнер",
+        "company": "Сбер",
+        "salaryMin": 120000,
+        "salaryMax": 180000,
+        "currency": "RUB",
+        "description": "Полиграфия, фирменный стиль. Photoshop, Illustrator. Иногда соцсети.",
+        "url": "https://hh.ru/vacancy/100002",
+        "source": "hh.ru",
+        "skills": [
+            "Photoshop",
+            "Illustrator",
+            "Brand Identity"
+        ],
+        "createdAt": "06.08.26"
+    },
+    {
+        "title": "Frontend-разработчик",
+        "company": "Тинькофф",
+        "salaryMin": 220000,
+        "salaryMax": 350000,
+        "currency": "RUB",
+        "description": "React, TypeScript. Разработка интерфейсов для внутренних продуктов.",
+        "url": "https://hh.ru/vacancy/100003",
+        "source": "hh.ru",
+        "skills": [
+            "React",
+            "TypeScript",
+            "JavaScript",
+            "HTML"
+        ],
+        "createdAt": "01.08.26"
+    },
+    {
+        "title": "Моушн-дизайнер",
+        "company": "VK",
+        "salaryMin": 150000,
+        "salaryMax": 250000,
+        "currency": "RUB",
+        "description": "Анимация для рекламных роликов. After Effects, Cinema 4D. Офис у м. Динамо.",
+        "url": "https://hh.ru/vacancy/100004",
+        "source": "hh.ru",
+        "skills": [
+            "After Effects",
+            "Cinema 4D",
+            "Animation"
+        ],
+        "createdAt": "03.08.26"
+    },
+    {
+        "title": "Backend-разработчик (Python)",
+        "company": "Авито",
+        "salaryMin": 250000,
+        "salaryMax": 400000,
+        "currency": "RUB",
+        "description": "FastAPI, PostgreSQL. Разработка микросервисов. Опыт от 2 лет.",
+        "url": "https://hh.ru/vacancy/100005",
+        "source": "hh.ru",
+        "skills": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL",
+            "Docker"
+        ],
+        "createdAt": "07.08.26"
+    },
+    {
+        "title": "Иллюстратор",
+        "company": "Bookmate",
+        "salaryMin": 100000,
+        "salaryMax": 160000,
+        "currency": "RUB",
+        "description": "Обложки для книг, стикеры. Вектор и растр. Главное — стиль.",
+        "url": "https://hh.ru/vacancy/100006",
+        "source": "hh.ru",
+        "skills": [
+            "Illustration",
+            "Vector",
+            "Photoshop"
+        ],
+        "createdAt": "28.07.26"
+    },
+    {
+        "title": "DevOps-инженер",
+        "company": "Ozon",
+        "salaryMin": 300000,
+        "salaryMax": 450000,
+        "currency": "RUB",
+        "description": "Kubernetes, Terraform. CI/CD для высоконагруженных сервисов.",
+        "url": "https://hh.ru/vacancy/100007",
+        "source": "hh.ru",
+        "skills": [
+            "Kubernetes",
+            "Docker",
+            "Terraform",
+            "Linux"
+        ],
+        "createdAt": "02.08.26"
+    },
+    {
+        "title": "Фотограф / ретушер",
+        "company": "Lamoda",
+        "salaryMin": 90000,
+        "salaryMax": 140000,
+        "currency": "RUB",
+        "description": "Съемка товара для каталога. Lightroom, Capture One. Студия на Тульской.",
+        "url": "https://hh.ru/vacancy/100008",
+        "source": "hh.ru",
+        "skills": [
+            "Photography",
+            "Lightroom",
+            "Retouching"
+        ],
+        "createdAt": "04.08.26"
+    },
+    {
+        "title": "QA-инженер",
+        "company": "Самокат",
+        "salaryMin": 140000,
+        "salaryMax": 220000,
+        "currency": "RUB",
+        "description": "Ручное тестирование мобильного приложения. Postman, Charles.",
+        "url": "https://hh.ru/vacancy/100009",
+        "source": "hh.ru",
+        "skills": [
+            "Testing",
+            "Postman",
+            "Charles",
+            "Mobile"
+        ],
+        "createdAt": "08.08.26"
+    },
+    {
+        "title": "3D-дизайнер",
+        "company": "Wargaming",
+        "salaryMin": 200000,
+        "salaryMax": 350000,
+        "currency": "RUB",
+        "description": "Моделирование персонажей. Blender, ZBrush. Опыт в геймдеве — плюс.",
+        "url": "https://hh.ru/vacancy/100010",
+        "source": "hh.ru",
+        "skills": [
+            "Blender",
+            "ZBrush",
+            "3D Modeling",
+            "Substance Painter"
+        ],
+        "createdAt": "30.07.26"
+    },
+    {
+        "title": "Продуктовый аналитик",
+        "company": "Delivery Club",
+        "salaryMin": 180000,
+        "salaryMax": 280000,
+        "currency": "RUB",
+        "description": "SQL, Python. Анализ метрик продукта. Tableau или Power BI.",
+        "url": "https://hh.ru/vacancy/100011",
+        "source": "hh.ru",
+        "skills": [
+            "SQL",
+            "Python",
+            "Tableau",
+            "Product Analytics"
+        ],
+        "createdAt": "06.08.26"
+    },
+    {
+        "title": "Веб-дизайнер",
+        "company": "ИП Петров А.В.",
+        "salaryMin": 70000,
+        "salaryMax": 110000,
+        "currency": "RUB",
+        "description": "Лендинги для клиентов. Tilda, Figma. Удаленка.",
+        "url": "https://hh.ru/vacancy/100012",
+        "source": "hh.ru",
+        "skills": [
+            "Figma",
+            "Tilda",
+            "Web Design"
+        ],
+        "createdAt": "09.08.26"
+    },
+    {
+        "title": "Data Scientist",
+        "company": "МТС",
+        "salaryMin": 250000,
+        "salaryMax": 400000,
+        "currency": "RUB",
+        "description": "ML-модели для прогнозирования оттока. pandas, sklearn, catboost.",
+        "url": "https://hh.ru/vacancy/100013",
+        "source": "hh.ru",
+        "skills": [
+            "Python",
+            "Machine Learning",
+            "Pandas",
+            "SQL"
+        ],
+        "createdAt": "01.08.26"
+    },
+    {
+        "title": "Art Director",
+        "company": "Voskhod",
+        "salaryMin": 300000,
+        "salaryMax": 450000,
+        "currency": "RUB",
+        "description": "Руководство командой. Креативные концепции. Опыт от 5 лет.",
+        "url": "https://hh.ru/vacancy/100014",
+        "source": "hh.ru",
+        "skills": [
+            "Art Direction",
+            "Team Management",
+            "Creative Concept"
+        ],
+        "createdAt": "04.08.26"
+    },
+    {
+        "title": "Системный аналитик",
+        "company": "Ростелеком",
+        "salaryMin": 160000,
+        "salaryMax": 240000,
+        "currency": "RUB",
+        "description": "Сбор требований, BPMN. Взаимодействие с разработкой.",
+        "url": "https://hh.ru/vacancy/100015",
+        "source": "hh.ru",
+        "skills": [
+            "BPMN",
+            "SQL",
+            "System Analysis"
+        ],
+        "createdAt": "05.08.26"
+    },
+    {
+        "title": "Моушн-дизайнер (remote)",
+        "company": "Creative Studio",
+        "salaryMin": 130000,
+        "salaryMax": 200000,
+        "currency": "RUB",
+        "description": "Ролики для YouTube. After Effects, Premiere. Полная удаленка.",
+        "url": "https://hh.ru/vacancy/100016",
+        "source": "hh.ru",
+        "skills": [
+            "After Effects",
+            "Premiere Pro",
+            "Motion Graphics"
+        ],
+        "createdAt": "07.08.26"
+    },
+    {
+        "title": "iOS-разработчик",
+        "company": "HeadHunter",
+        "salaryMin": 280000,
+        "salaryMax": 420000,
+        "currency": "RUB",
+        "description": "Swift, UIKit. Разработка приложения поиска работы.",
+        "url": "https://hh.ru/vacancy/100017",
+        "source": "hh.ru",
+        "skills": [
+            "Swift",
+            "iOS",
+            "UIKit",
+            "Git"
+        ],
+        "createdAt": "02.08.26"
+    },
+    {
+        "title": "3D-визуализатор",
+        "company": "ArchGroup",
+        "salaryMin": 110000,
+        "salaryMax": 170000,
+        "currency": "RUB",
+        "description": "Интерьеры. 3ds Max, Corona Render. Иногда SketchUp.",
+        "url": "https://hh.ru/vacancy/100018",
+        "source": "hh.ru",
+        "skills": [
+            "3ds Max",
+            "Corona Render",
+            "SketchUp"
+        ],
+        "createdAt": "08.08.26"
+    },
+    {
+        "title": "Product Manager",
+        "company": "Skyeng",
+        "salaryMin": 200000,
+        "salaryMax": 320000,
+        "currency": "RUB",
+        "description": "Развитие образовательной платформы. Roadmap, метрики, команда.",
+        "url": "https://hh.ru/vacancy/100019",
+        "source": "hh.ru",
+        "skills": [
+            "Product Management",
+            "Metrics",
+            "Roadmap"
+        ],
+        "createdAt": "03.08.26"
+    },
+    {
+        "title": "Графический дизайнер (стажер)",
+        "company": "МедиаГрупп",
+        "salaryMin": 40000,
+        "salaryMax": 60000,
+        "currency": "RUB",
+        "description": "Помощь основному дизайнеру. Баннеры, подготовка к печати. Можно без опыта.",
+        "url": "https://hh.ru/vacancy/100020",
+        "source": "hh.ru",
+        "skills": [
+            "Photoshop",
+            "Illustrator",
+            "Print"
+        ],
+        "createdAt": "09.08.26"
+    }
+]
