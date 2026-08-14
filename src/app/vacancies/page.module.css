@@ -6,4 +6,21 @@
     position: fixed;
     padding-left: 10%;
 
-}   
+}
+
+.vacanciesHeader {
+    width: 90%;
+    min-height:80px;
+    padding: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    
+}
+.headerH1{
+    color: var(--text-color);
+    font-weight: lighter;
+}
