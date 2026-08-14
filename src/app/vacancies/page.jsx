@@ -1,5 +1,4 @@
 import styles from './page.module.css'
-import InputVac from '@/components/atoms/inputVac/inputVac';
 
 const Page = () => {
 
@@ -12,12 +11,16 @@ const Page = () => {
 
                 <h1 className={styles.headerH1}
                 >Vacancies &gt;&gt;</h1>
-                <div className={styles.vacanciesMain}>
-                    <input type="text" />
-                    <button>Найти</button>
+
+                <div className={styles.vacanciesSearchContainer}>
+                    <div className={styles.vacanciesInputContainer}>
+                        <input type="text" className={styles.vacanciesInput} placeholder='🔎 Введите профессию...' />
+                    </div>
+
+                    <button className={styles.vacanciesInputBtn}>Найти</button>
                 </div>
             </header>
-            <main>
+            <main   className={styles.vacanciesMain}>
                 <div>
                     card
                 </div>

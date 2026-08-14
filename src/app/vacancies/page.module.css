@@ -1,8 +1,7 @@
 .page {
     width: 100vw;
     min-height: 100vh;
-    background-color: var(--background);
-    color: #e5e5e5;
+    background-color: var(--foreground);
     position: fixed;
     padding-left: 10%;
 
@@ -10,17 +9,60 @@
 
 .vacanciesHeader {
     width: 90%;
-    min-height:80px;
+    height: 180px;
+
     padding: 20px;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     gap: 30px;
-    
+
 }
-.headerH1{
+
+.headerH1 {
     color: var(--text-color);
     font-weight: lighter;
+    text-decoration: underline;
+    text-underline-offset: 24px;
+    text-decoration-thickness: 1.5px;
+}
+
+.vacanciesSearchContainer {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.vacanciesInputContainer {
+    width: 42%;
+    height: 100%;
+    border: 1px solid var(--accent-color);
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--background);
+    display: flex;
+
+}
+
+.vacanciesInput {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-color);
+}
+
+.vacanciesInput:focus {
+    outline: none;
+}
+
+.vacanciesInputBtn {
+    width: 12%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem
 }
