@@ -1,7 +1,7 @@
     import './vacanCard.css';
     import Link from 'next/link';
     
-    const VacancieCard = ({ title, pay, logo, link }) => {
+    const VacanCard = ({ title, pay, logo, link }) => {
         return (
             <div className='vacancie_card'>
                 <img src={logo} alt="vacancie_card_logo"/>
@@ -21,4 +21,4 @@
         )
     }
 
-    export default VacancieCard;
+    export default VacanCard;

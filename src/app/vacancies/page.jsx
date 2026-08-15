@@ -1,9 +1,9 @@
 'use client'
 
 import styles from './page.module.css'
-import VacancieCard from '@/components/atoms/vacanCard/vacanCard';
-import { ChartNoAxesColumn, Eraser } from 'lucide-react';
+import VacanCard from '@/components/atoms/vacanCard/vacanCard';
 import { useState, useEffect, use } from 'react';
+import VacancieCard from '@/components/vacancieCard/vacancieCard';
 
 const Page = () => {
 
@@ -75,10 +75,16 @@ const Page = () => {
                         return (
                             <VacancieCard
                                 key={item._id}
-                                logo={item.logo}
                                 title={item.title}
-                                pay={item.salaryMin}
-                                link={item.url}
+                                company={item.company}
+                                skills={item.skills}
+                                salaryMin={item.salaryMin}
+                                salaryMax={item.salaryMax}
+                                createdAt={item.createdAt}
+                                source={item.source}
+                                currency={item.currency}
+                                description={item.description}
+                                url={item.url}
                             />
                         );
                     })
