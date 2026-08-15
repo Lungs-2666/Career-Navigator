@@ -1,13 +1,13 @@
 :root {
   --primary-color: #406354;
-  --secondary-color: #191314;
-  --accent-color: #c0b395;
-  --accent-color-2: #f2ff66;
-  --background: #ffffff;  
+  --secondary-color: #4A3728;
+  --accent-color: #C0B395;
+  --accent-color-2: #D4A574;
+  --background: #FFFFFF;  
   /* --foreground: #171717; */
-  --foreground: #eceae5;
-  --text-color: #191314;
-  --text-color-2: #ffffff; 
+  --foreground: #F5F0E8;
+  --text-color: #2C1810;
+  --text-color-2: #FFFFFF; 
 }
 
 /* @media (prefers-color-scheme: dark) {
