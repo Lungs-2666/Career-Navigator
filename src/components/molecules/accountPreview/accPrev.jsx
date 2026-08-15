@@ -5,7 +5,7 @@
     const AccountPreview = () => {
         return (
             <div className='account_preview'>
-                <Link href="/account" className='account_preview_link'> Create account {">>"} </Link> 
+                <Link href="/sign-up" className='account_preview_link'> Create account {">>"} </Link> 
                  
                 <div className='account_preview_main'>
                     <h2 className='account_preview_heading'> Create now! </h2>
@@ -16,7 +16,7 @@
                         <div className='inpt_prev_3'> <TextTypeComponent text={["Frontend", "Backend", "Web-design"]} /> </div>
                     </div>
 
-                    <Link href="/account" className='account_preview_btn'> Get started </Link>
+                    <Link href="/sign-up" className='account_preview_btn'> Get started </Link>
                 </div>
             </div>
         );

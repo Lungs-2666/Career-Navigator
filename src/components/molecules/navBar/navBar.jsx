@@ -13,7 +13,7 @@
                 </div>
 
                 <div className='nav_bar_2'>
-                    <Link href='/account' className="nav_item" >   <CircleUser color='#191314' size={24} strokeWidth={1.5}/>        </Link>
+                    <Link href='/login' className="nav_item" >   <CircleUser color='#191314' size={24} strokeWidth={1.5}/>        </Link>
                     <Link href='/setting' className="nav_item" >   <Settings color='#191314' size={24} strokeWidth={1.5}/>          </Link>
                 </div>
             </nav>  
