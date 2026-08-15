@@ -1,70 +1,41 @@
-
+'use client'
 
 import styles from './page.module.css'
 import VacancieCard from '@/components/atoms/vacanCard/vacanCard';
-
+import { ChartNoAxesColumn, Eraser } from 'lucide-react';
+import { useState, useEffect, use } from 'react';
 
 const Page = () => {
 
 
-    const test_cards = [
-        {
-            id: 1,
-            title: 'card_test',
-            pay: '$100/month',
-            logo: '/logos/logo_1',
-            link: '/vacancie/1'
-        },
-        {
-            id: 2,
-            title: 'card_test',
-            pay: '$100/month',
-            logo: '/logos/logo_1',
-            link: '/vacancie/1'
-        },
-        {
-            id: 3,
-            title: 'card_test',
-            pay: '$100/month',
-            logo: '/logos/logo_1',
-            link: '/vacancie/1'
-        },
-        {
-            id: 4,
-            title: 'card_test',
-            pay: '$100/month',
-            logo: '/logos/logo_1',
-            link: '/vacancie/1'
-        },
-        {
-            id: 5,
-            title: 'card_test',
-            pay: '$100/month',
-            logo: '/logos/logo_1',
-            link: '/vacancie/1'
-        },
-        {
-            id: 6,
-            title: 'card_test',
-            pay: '$100/month',
-            logo: '/logos/logo_1',
-            link: '/vacancie/1'
-        },
-        {
-            id: 7,
-            title: 'card_test',
-            pay: '$100/month',
-            logo: '/logos/logo_1',
-            link: '/vacancie/1'
-        },
-        {
-            id: 8,
-            title: 'card_test',
-            pay: '$100/month',
-            logo: '/logos/logo_1',
-            link: '/vacancie/1'
+
+    const [inputValue, setInputValue] = useState('');
+    const [vacancies, setVacancies] = useState([]);
+
+
+
+
+
+    function getData(inputValue) {
+        const params = new URLSearchParams();
+        if (inputValue == '') {
+            alert('Введите текст!!!')
+        } else {
+            params.append("title", inputValue)
+            const query = params.toString();
+            console.log(query)
+            fetch(`api/vacancies?${query}`)
+                .then((res) => res.json())
+                .then(setVacancies)
+                .catch((err) => {
+                    console.error(err);
+                })
         }
-    ]
+
+
+
+    }
+
 
     return (
         <div className={styles.page}
@@ -78,24 +49,38 @@ const Page = () => {
 
                 <div className={styles.vacanciesSearchContainer}>
                     <div className={styles.vacanciesInputContainer}>
-                        <input type="text" className={styles.vacanciesInput} placeholder='🔎 Введите профессию...' />
+                        <input
+                            type="text"
+                            className={styles.vacanciesInput}
+                            placeholder='🔎 Введите профессию...'
+                            onChange={(e) => {
+                                setInputValue(e.target.value)
+                            }}
+                        />
                     </div>
 
-                    <button className={styles.vacanciesInputBtn}>Найти</button>
+                    <button
+                        className={styles.vacanciesInputBtn}
+                        onClick={() => { getData(inputValue) }}
+                    >Найти</button>
                 </div>
             </header>
             <main className={styles.vacanciesMain}>
-                {test_cards.map((item) => {
-                    return (
-                        <VacancieCard
-                            key={item.id}
-                            logo={item.logo}
-                            title={item.title}
-                            pay={item.pay}
-                            link={item.link}
-                        />
-                    );
-                })}
+                {vacancies == [] ? <p>rtyu</p> :
+                    vacancies.map((item) => {
+                        console.log(item)
+                        return (
+                            <VacancieCard
+                                key={item._id}
+                                logo={item.logo}
+                                title={item.title}
+                                pay={item.salaryMin}
+                                link={item.url}
+                            />
+                        );
+                    })
+                }
+
             </main>
         </div>
     )
