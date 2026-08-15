@@ -66,9 +66,12 @@ const Page = () => {
                 </div>
             </header>
             <main className={styles.vacanciesMain}>
-                {vacancies == [] ? <p>rtyu</p> :
+                {vacancies.length === 0 ? (
+                    <div className={styles.MainPContainer}>
+                        <p className={styles.vacanciesMainP}>
+                            Здесь пока ничего нет :&lt;</p>
+                    </div>) : (
                     vacancies.map((item) => {
-                        console.log(item)
                         return (
                             <VacancieCard
                                 key={item._id}
@@ -79,6 +82,7 @@ const Page = () => {
                             />
                         );
                     })
+                )
                 }
 
             </main>

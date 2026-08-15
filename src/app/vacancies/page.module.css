@@ -81,3 +81,13 @@
     box-sizing: border-box;
     overflow-y: auto;
 }
+.MainPContainer{
+  
+    
+}
+.vacanciesMainP{
+    color: var(--text-color);
+    position: absolute;
+    left: calc(100vw - 64vw);
+    top: calc(100vh - 60vh);
+}
