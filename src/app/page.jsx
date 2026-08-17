@@ -14,11 +14,10 @@
 
                 <main className={styles.main}>
                     <div className={styles.snip_group}>
-                        <VacanciesPreview />    
+                        <VacanciesPreview />
                         <SkillmapPreview />
                         <AccountPreview />
-                        <ResourcesPreview />
-                        {/* <ResourcesSnippets /> */}
+                        {/* <ResourcesPreview /> */}
                     </div>
                 </main>
             </div>

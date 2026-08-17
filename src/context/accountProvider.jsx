@@ -19,7 +19,6 @@
                     return;
                 }
 
-
                 const authUser = session.user;
 
                 const {data: profile} = await supabase
@@ -28,7 +27,7 @@
                     .eq('id', authUser.id)
                     .single();
 
-                    console.log('Profile from Supabase:', profile); // ← добавь это
+                // console.log('Profile from Supabase:', profile);
 
 
                 setUser({
@@ -37,11 +36,11 @@
                     direction: profile.direction
                 });
 
-                console.log('User in context:', {
-                    id: authUser.id,
-                    email: profile?.email || authUser.email,
-                    direction: profile?.direction || null,
-                }); // ← добавь это
+                // console.log('User in context:', {
+                //     id: authUser.id,
+                //     email: profile?.email || authUser.email,
+                //     direction: profile?.direction || null,
+                // });
 
                 setLoading(false);
             };
@@ -62,20 +61,12 @@
                     .select('direction')
                     .eq('id', authUser.id)
                     .single();
-                
-                    console.log('Profile from Supabase:', profile); // ← добавь это
+
                 setUser({
                     // id: authUser.id
                     email: profile?.email || authUser.email,
                     direction: profile.direction
                 });
-
-
-                console.log('User in context:', {
-                    id: authUser.id,
-                    email: profile?.email || authUser.email,
-                    direction: profile?.direction || null,
-                }); // ← добавь это
 
                 setLoading(false);
             });

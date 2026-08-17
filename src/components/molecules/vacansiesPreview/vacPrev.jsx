@@ -28,14 +28,21 @@
             logo: '/logos/logo_1',
             link: '/vacancie/1'
         },
-        // {
-        //     id: 4,
-        //     title: 'card_test',
-        //     pay: '$100/month',
-        //     logo: '/logos/logo_1',
-        //     link: '/vacancie/1'
-        // }
-    ]
+        {
+            id: 4,
+            title: 'card_test',
+            pay: '$100/month',
+            logo: '/logos/logo_1',
+            link: '/vacancie/1'
+        },
+        {
+            id: 5,
+            title: 'card_test',
+            pay: '$100/month',
+            logo: '/logos/logo_1',
+            link: '/vacancie/1'
+        }
+    ];
     
     const VacanciesPreview = () => {
         const [vacPreview, setVacPreview] = useState(test_cards); //First 4-5 vacansies
