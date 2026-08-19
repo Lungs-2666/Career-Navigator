@@ -23,7 +23,7 @@
 
                 const {data: profile} = await supabase
                     .from('profiles')
-                    .select('email', 'direction')
+                    .select('direction')
                     .eq('id', authUser.id)
                     .single();
 
@@ -33,7 +33,7 @@
                 setUser({
                     // id: authUser.id
                     email: profile?.email || authUser.email,
-                    direction: profile.direction
+                    direction: profile?.direction ?? ''
                 });
 
                 // console.log('User in context:', {
@@ -65,7 +65,7 @@
                 setUser({
                     // id: authUser.id
                     email: profile?.email || authUser.email,
-                    direction: profile.direction
+                    direction: profile?.direction ?? ''
                 });
 
                 setLoading(false);
