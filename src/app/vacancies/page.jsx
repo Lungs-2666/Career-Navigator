@@ -11,7 +11,7 @@ const Page = () => {
 
     const [inputValue, setInputValue] = useState('');
     const [vacancies, setVacancies] = useState([]);
-
+    const [IsLoading, setIsLoading] = useState(false)
 
 
 
@@ -25,15 +25,17 @@ const Page = () => {
             const query = params.toString();
             console.log(query)
             fetch(`api/vacancies?${query}`)
-                .then((res) => res.json())
-                .then(setVacancies)
+                .then((res) => {
+                    setIsLoading(true)
+                    return res.json()
+                })
+                .then((data) => {
+                    setIsLoading(false)
+                })
                 .catch((err) => {
                     console.error(err);
                 })
         }
-
-
-
     }
 
 
@@ -66,6 +68,7 @@ const Page = () => {
                 </div>
             </header>
             <main className={styles.vacanciesMain}>
+                {!IsLoading}
                 {vacancies.length === 0 ? (
                     <div className={styles.MainPContainer}>
                         <p className={styles.vacanciesMainP}>

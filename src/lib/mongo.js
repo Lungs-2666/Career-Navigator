@@ -21,4 +21,5 @@ export async function connectToDatabase() {
     console.error('❌ Ошибка подключения к MongoDB:', error)
     throw error
   }
+
 }

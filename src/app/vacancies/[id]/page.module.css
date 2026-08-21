@@ -2,7 +2,6 @@
     width: 100%;
     min-height: 100vh;
     background-color: var(--foreground);
-    padding-left: 10%;
     display: flex;
     justify-content: center;
     position: absolute;
@@ -11,12 +10,12 @@
 }
 
 .main {
-    padding-top: 8vh;
     width: 70%;
     min-height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 4vh;
 
 }
@@ -120,6 +119,10 @@
     font-size: 12px;
 }
 
+.vacancieCardSkill:hover {
+    background-color: var(--accent-color);
+}
+
 .vacancieCardSkillMore {
     padding: 8px;
     min-width: 24px;
@@ -149,10 +152,22 @@
     gap: 2px;
     align-items: start;
     justify-content: space-evenly;
+    transition: all 0.4s;
+    cursor: default;
+}
+
+.descriptionContainer:hover {
+    width: 44%;
+
+    .descriptionHeader {
+        font-size: 26px;
+    }
 }
 
 .descriptionHeader {
     color: var(--primary-color);
+    transition: all 0.4s;
+
 }
 
 .line {
@@ -169,6 +184,7 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 1.4;
+    font-size: 16px;
 }
 
 .underContainer {
@@ -188,10 +204,20 @@
     border-radius: 12px;
     background-color: var(--background);
 }
-.graphBtn{
+
+.graphBtn {
+    font-size: 18px;
     padding: 20px;
     width: 320px;
     border-radius: 12px;
     border: none;
     background: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.graphBtn:hover {
+    cursor: pointer;
+    width: 330px;
+    background-color: var(--accent-color);
+    color: black;
 }

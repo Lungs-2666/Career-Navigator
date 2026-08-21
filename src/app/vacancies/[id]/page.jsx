@@ -31,7 +31,7 @@ function Page() {
 
     }, [id])
 
-    if (loading) return (<p>Поиск вакансии...</p>)
+    if (loading) return (<p style={{position:'absolute', zIndex: 1000}} >Поиск вакансии...</p>)
 
     return (
         <div className={styles.page}>
