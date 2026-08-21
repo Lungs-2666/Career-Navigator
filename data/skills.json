@@ -1,0 +1,194 @@
+[
+    {
+        "name": "Figma",
+        "category": "Design",
+        "demand": 92,
+        "createdAt": "2026-07-24T14:23:16.493Z"
+    },
+    {
+        "name": "UI",
+        "category": "Design",
+        "demand": 70,
+        "createdAt": "2026-07-24T14:23:16.493Z"
+    },
+    {
+        "name": "UX",
+        "category": "Research",
+        "demand": 75,
+        "createdAt": "2026-07-25T09:15:00.000Z"
+    },
+    {
+        "name": "Prototyping",
+        "category": "Design",
+        "demand": 65,
+        "createdAt": "2026-07-25T09:15:00.000Z"
+    },
+    {
+        "name": "Photoshop",
+        "category": "Design",
+        "demand": 78,
+        "createdAt": "2026-07-26T11:20:00.000Z"
+    },
+    {
+        "name": "Illustrator",
+        "category": "Design",
+        "demand": 65,
+        "createdAt": "2026-07-26T11:20:00.000Z"
+    },
+    {
+        "name": "Brand Identity",
+        "category": "Design",
+        "demand": 55,
+        "createdAt": "2026-07-27T14:30:00.000Z"
+    },
+    {
+        "name": "React",
+        "category": "Web",
+        "demand": 58,
+        "createdAt": "2026-07-27T14:30:00.000Z"
+    },
+    {
+        "name": "TypeScript",
+        "category": "Web",
+        "demand": 62,
+        "createdAt": "2026-07-28T08:45:00.000Z"
+    },
+    {
+        "name": "JavaScript",
+        "category": "Web",
+        "demand": 58,
+        "createdAt": "2026-07-28T08:45:00.000Z"
+    },
+    {
+        "name": "HTML",
+        "category": "Web",
+        "demand": 50,
+        "createdAt": "2026-07-29T10:00:00.000Z"
+    },
+    {
+        "name": "After Effects",
+        "category": "Animation",
+        "demand": 70,
+        "createdAt": "2026-07-29T10:00:00.000Z"
+    },
+    {
+        "name": "Cinema 4D",
+        "category": "3D",
+        "demand": 55,
+        "createdAt": "2026-07-30T13:15:00.000Z"
+    },
+    {
+        "name": "Animation",
+        "category": "Animation",
+        "demand": 60,
+        "createdAt": "2026-07-30T13:15:00.000Z"
+    },
+    {
+        "name": "Python",
+        "category": "Backend",
+        "demand": 72,
+        "createdAt": "2026-07-31T16:20:00.000Z"
+    },
+    {
+        "name": "FastAPI",
+        "category": "Backend",
+        "demand": 45,
+        "createdAt": "2026-07-31T16:20:00.000Z"
+    },
+    {
+        "name": "PostgreSQL",
+        "category": "Backend",
+        "demand": 68,
+        "createdAt": "2026-08-01T09:30:00.000Z"
+    },
+    {
+        "name": "Docker",
+        "category": "DevOps",
+        "demand": 75,
+        "createdAt": "2026-08-01T09:30:00.000Z"
+    },
+    {
+        "name": "Illustration",
+        "category": "Design",
+        "demand": 55,
+        "createdAt": "2026-08-02T11:45:00.000Z"
+    },
+    {
+        "name": "Vector",
+        "category": "Design",
+        "demand": 45,
+        "createdAt": "2026-08-02T11:45:00.000Z"
+    },
+    {
+        "name": "Kubernetes",
+        "category": "DevOps",
+        "demand": 80,
+        "createdAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+        "name": "Terraform",
+        "category": "DevOps",
+        "demand": 70,
+        "createdAt": "2026-08-03T14:00:00.000Z"
+    },
+    {
+        "name": "Linux",
+        "category": "DevOps",
+        "demand": 65,
+        "createdAt": "2026-08-04T10:00:00.000Z"
+    },
+    {
+        "name": "Photography",
+        "category": "Art",
+        "demand": 40,
+        "createdAt": "2026-08-04T10:00:00.000Z"
+    },
+    {
+        "name": "Lightroom",
+        "category": "Art",
+        "demand": 35,
+        "createdAt": "2026-08-05T10:00:00.000Z"
+    },
+    {
+        "name": "Retouching",
+        "category": "Art",
+        "demand": 40,
+        "createdAt": "2026-08-05T10:00:00.000Z"
+    },
+    {
+        "name": "Testing",
+        "category": "QA",
+        "demand": 50,
+        "createdAt": "2026-08-06T10:00:00.000Z"
+    },
+    {
+        "name": "Postman",
+        "category": "QA",
+        "demand": 55,
+        "createdAt": "2026-08-06T10:00:00.000Z"
+    },
+    {
+        "name": "Blender",
+        "category": "3D",
+        "demand": 60,
+        "createdAt": "2026-08-07T10:00:00.000Z"
+    },
+    {
+        "name": "SQL",
+        "category": "Backend",
+        "demand": 85,
+        "createdAt": "2026-08-07T10:00:00.000Z"
+    },
+    {
+        "name": "Tilda",
+        "category": "Design",
+        "demand": 50,
+        "createdAt": "2026-08-08T10:00:00.000Z"
+    },
+    {
+        "name": "Web Design",
+        "category": "Design",
+        "demand": 65,
+        "createdAt": "2026-08-08T10:00:00.000Z"
+    }
+]
