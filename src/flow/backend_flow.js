@@ -5,79 +5,138 @@
         targetPosition: Position.Left,
     };
 
-    export const backend_nodes = [     //NOT TO FORGET TO ADD SOME NEEDED SKILLS
+    export const backend_nodes = [
         {
             id: '1',
-            position: { x: -200, y: 0 },
-            data: { label: 'Direction: backend' },
-            type: '',
+            position: { x: 0, y: 0 },
+            data: {
+                label: 'Python core',
+                items: [
+                    "Python syntax",
+                    "Variables",
+                    "Data Types",
+                    "Conditions",
+                    "Loops",
+                    "Functions + Function Parameters",
+                    "Lists",
+                    "Tuples",
+                    "Tupes + Dictionaries",
+                    "Sets",
+                    "String Methods",
+                    "Files",
+                    "JSON",
+                    "Exceprions",
+                    "Classes + Inheritance",
+                    "Decorators",
+                    "Generators",
+                    "Iterators",
+                    "Type Hints"
+                ],
+                label_color: '#3b66f1'
+            },
+            type: 'skills_node',
             ...nodeDefaults
         },
         {
             id: '2',
-            position: { x: 0, y: 0 },
-            data: { label: 'Useful resources:' },
-            type: '',
+            position: { x: 350, y: 0 },
+            data: {
+                label: 'Python tools',
+                items: [
+                    "Python Interpreter",
+                    "venv",
+                    "pip",
+                    "requirements.txt",
+                    "puprojects.toml",
+                    "Virtual Environment",
+                    "Black + Ruff",
+                    "mypy",
+                    "Python Logging",
+                    "Debugger",
+                    "Git"
+                ],
+                label_color: '#d1c301'
+            },
+            type: 'skills_node',
             ...nodeDefaults
         },
         {
             id: '3',
-            position: { x: 200, y: 0  },
-            data: { label: 'resource 1' },
-            type: '',
+            position: { x: 600, y: 0 },
+            data: {
+                label: 'Web & HTTP',
+                items: [
+                    "Client & Server",
+                    "HTTP",
+                    "Request + Response",
+                    "HTTP methods",
+                    "Status codes",
+                    "Headers",
+                    "Cookies + Sessions",
+                    "JSON API",
+                    "URL & query params",
+                    "Path parameters",
+                    "CORS",
+                    "Middleware"
+                ],
+                label_color: '#3b66f1'
+            },
+            type: 'skills_node',
             ...nodeDefaults
         },
         {
             id: '4',
-            position: { x: 200, y: 100 },
-            data: { label: 'resource 2' },
-            type: '',
+            position: { x: 600, y: 300 },
+            data: {
+                label: 'Databases: SQL & PostgreSQL',
+                items: [
+                    "SQL basics",
+                    "PostgreSQL",
+                    "Tables & Columns",
+                    "Primary key & Foreign key",
+                    "One-to-one & many-to-many",
+                    "SELECT, INSERT, UPDATE, DELETE, JOIN",
+                    "Indexes",
+                    "Transactions",
+                    "Constraints",
+                    "Migrations"
+                ],
+                label_color: '#d1c301'
+            },
+            type: 'skills_node',
             ...nodeDefaults
         },
         {
             id: '5',
-            position: { x: 200, y: 200 },
-            data: { label: 'resource 3' },
-            type: '',
+            position: { x: 1000, y: 0 },
+            data: {
+                label: 'Authentication',
+                items: [
+                    "User model",
+                    "Registration",
+                    "Login & logout",
+                    "Password Hashing",
+                    "bcrypt / Argon2",
+                    "Session Auth",
+                    "JWT Auth",
+                    "Access token & Refresh token",
+                    "OAuth2 & OAuth providers",
+                    "Email verefication",
+                    "Password reset",
+                    "MFA"
+                ],
+                label_color: '#3b66f1'
+            },
+            type: 'skills_node',
             ...nodeDefaults
         },
-        {
-            id: '6',
-            position: { x: 400, y: 200 },
-            data: { label: 'Your vacancies:' },
-            type: '',
-            ...nodeDefaults
-        },
-        {
-            id: '7',
-            position: { x: 600, y: 200},
-            data: { label: 'vacancie 1' },
-            type: '',
-            ...nodeDefaults
-        },
-        {
-            id: '8',
-            position: { x: 600, y: 300 },
-            data: { label: 'vacancie 2' },
-            type: '',
-            ...nodeDefaults
-        },
-        {
-            id: '9',
-            position: { x: 600, y: 400 },
-            data: { label: 'vacancie 3' },
-            type: '',
-            ...nodeDefaults
-        }
     ];
 
     export const backend_edges = [
         {
             id: 'e1-2',
             source: '1',
-            target: '2',
-            //animated: ''
-            //type: ''
+            target: '2'
         },
         {
             id: 'e2-3',
@@ -90,28 +149,13 @@
             target: '4'
         },
         {
-            id: 'e2-5',
-            source: '2',
+            id: 'e3-5',
+            source: '3',
             target: '5'
         },
         {
-            id: 'e5-6',
-            source: '5',
-            target: '6'
-        },
-        {
-            id: 'e6-7',
-            source: '6',
-            target: '7'
-        },
-        {
-            id: 'e6-8',
-            source: '6',
-            target: '8'
-        },
-        {
-            id: 'e6-9',
-            source: '6',
-            target: '9'
+            id: 'e4-5',
+            source: '4',
+            target: '5'
         }
     ];

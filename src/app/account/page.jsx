@@ -19,7 +19,7 @@
         }, [user, loading, router]);
 
         if (loading) {
-            return <div>Загрузка...</div>;
+            return <div>Loading...</div>;
         }
 
         return (

@@ -95,3 +95,24 @@
         text-align: center;
         align-content: center;
     }
+
+    .skills_node{
+        border: 1px solid var(--secondary-color);
+        background-color: var(--foreground);
+        color: var(--text-color) !important;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        cursor: default;
+        min-width: 150px;
+        font-size: .9rem;
+        padding: 10px 30px;
+    }
+
+    .skills_node_label{
+        text-decoration: underline;
+        cursor: pointer;
+        /* color: #23bbcf; */
+    }
