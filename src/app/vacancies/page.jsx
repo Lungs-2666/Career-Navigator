@@ -3,7 +3,7 @@
 import styles from './page.module.css'
 import VacanCard from '@/components/atoms/vacanCard/vacanCard';
 import { useState, useEffect, use } from 'react';
-import VacancieCard from '@/components/vacancieCard/vacancieCard';
+import VacancieCard from '@/components/atoms/vacancieCard/vacancieCard';
 
 const Page = () => {
 
@@ -85,6 +85,7 @@ const Page = () => {
                                 currency={item.currency}
                                 description={item.description}
                                 url={item.url}
+                                id={item._id}
                             />
                         );
                     })

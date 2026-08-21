@@ -1,7 +1,7 @@
 import './vacancieCard.css'
+import Link from 'next/link';
 
-
-const VacancieCard = ({ title, company, salaryMin, salaryMax, source, currency, description, skills, url, createdAt }) => {
+const VacancieCard = ({ id, title, company, salaryMin, salaryMax, source, currency, description, skills, url, createdAt }) => {
 
 
     const visibleSkills = skills.length > 2 ? skills.slice(0, 2) : skills;
@@ -37,7 +37,12 @@ const VacancieCard = ({ title, company, salaryMin, salaryMax, source, currency, 
                     <p className="vacancieCardSalary">{`${salaryMin} - ${salaryMax}`}</p>
                     <p className="vacancieCardCurrency">{currency == 'RUB' ? "₽" : "$"}<span>/мес</span></p>
                 </div>
-                <button className="vacancieCardBtn">Посмотреть вакансию &gt;</button>
+                <Link
+                    href={`vacancies/${id}`}
+                    className='vacancieCardLink'
+                >
+                    <button className="vacancieCardBtn">Посмотреть вакансию &gt;</button>
+                </Link>
             </div>
             <div className="vacancieCardFooter">
                 <p className="vacancieCardDate">{createdAt}</p>
