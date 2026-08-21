@@ -5,79 +5,100 @@
         targetPosition: Position.Left,
     };
 
-    export const design_nodes = [     //NOT TO FORGET TO ADD SOME NEEDED SKILLS
+    export const design_nodes = [
         {
             id: '1',
-            position: { x: -200, y: 0 },
-            data: { label: 'Direction: web-design' },
-            type: '',
-            ...nodeDefaults
+            position: { x: 0, y: 0 },
+            data: {
+                label: 'Design Fundamentals',
+                items: [
+                    "Design principles",
+                    "Typography",
+                    "Color theory",
+                    "Layout & grid",
+                    "Visual Hierarchy"
+                ],
+                label_color: '#d8ca50'
+            },
+            type: 'skills_node',
+            ...nodeDefaults 
         },
         {
             id: '2',
-            position: { x: 0, y: 0 },
-            data: { label: 'Useful resources:' },
-            type: '',
-            ...nodeDefaults
+            position: { x: 300, y: 0 },
+            data: {
+                label: 'UX Foundations',
+                items: [
+                    "What is UX?",
+                    "User research",
+                    "Personas & empathy maps",
+                    "User journeys & flows",
+                    "Information architecture",
+                    "Wireframing"
+                ],
+                label_color: '#376de2'
+            },
+            type: 'skills_node',
+            ...nodeDefaults 
         },
         {
             id: '3',
-            position: { x: 200, y: 0  },
-            data: { label: 'resource 1' },
-            type: '',
-            ...nodeDefaults
+            position: { x: 600, y: 0 },
+            data: {
+                label: 'Tools',
+                items: [
+                    "Figma basics",
+                    "Component & variants",
+                    "Auto layout",
+                    "Prototyping",
+                    "Design systems",
+                    "Developer handoff"
+                ],
+                label_color: '#f5751f'
+            },
+            type: 'skills_node',
+            ...nodeDefaults 
         },
         {
             id: '4',
-            position: { x: 200, y: 100 },
-            data: { label: 'resource 2' },
-            type: '',
-            ...nodeDefaults
+            position: { x: 900, y: 0 },
+            data: {
+                label: 'Advanced UX/UI',
+                items: [
+                    "Usability testing",
+                    "Accessibility (ally)",
+                    "Mobile-first & responsive",
+                    "Micro-interactions",
+                    "Design sprints"
+                ],
+                label_color: '#34b334'
+            },
+            type: 'skills_node',
+            ...nodeDefaults 
         },
         {
             id: '5',
-            position: { x: 200, y: 200 },
-            data: { label: 'resource 3' },
-            type: '',
-            ...nodeDefaults
+            position: { x: 1200, y: 0 },
+            data: {
+                label: 'Portfolio & career',
+                items: [
+                    "Case studies",
+                    "Portfolio",
+                    "Soft skills",
+                    "AI for designers"
+                ],
+                label_color: '#c93f3f'
+            },
+            type: 'skills_node',
+            ...nodeDefaults 
         },
-        {
-            id: '6',
-            position: { x: 400, y: 200 },
-            data: { label: 'Your vacancies:' },
-            type: '',
-            ...nodeDefaults
-        },
-        {
-            id: '7',
-            position: { x: 600, y: 200},
-            data: { label: 'vacancie 1' },
-            type: '',
-            ...nodeDefaults
-        },
-        {
-            id: '8',
-            position: { x: 600, y: 300 },
-            data: { label: 'vacancie 2' },
-            type: '',
-            ...nodeDefaults
-        },
-        {
-            id: '9',
-            position: { x: 600, y: 400 },
-            data: { label: 'vacancie 3' },
-            type: '',
-            ...nodeDefaults
-        }
     ];
 
     export const design_edges = [
         {
             id: 'e1-2',
             source: '1',
-            target: '2',
-            //animated: ''
-            //type: ''
+            target: '2'
         },
         {
             id: 'e2-3',
@@ -85,33 +106,13 @@
             target: '3'
         },
         {
-            id: 'e2-4',
-            source: '2',
+            id: 'e3-4',
+            source: '3',
             target: '4'
         },
         {
-            id: 'e2-5',
-            source: '2',
+            id: 'e4-5',
+            source: '4',
             target: '5'
-        },
-        {
-            id: 'e5-6',
-            source: '5',
-            target: '6'
-        },
-        {
-            id: 'e6-7',
-            source: '6',
-            target: '7'
-        },
-        {
-            id: 'e6-8',
-            source: '6',
-            target: '8'
-        },
-        {
-            id: 'e6-9',
-            source: '6',
-            target: '9'
         }
     ];
