@@ -1,0 +1,39 @@
+    .account_page{
+        width: 100vw;
+        height: 100svh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    
+    .account_page_main{
+        width: 40%;
+        height: 80%;
+        position: fixed;
+        z-index: 20;
+        top: calc(50% - 40%);
+        left: calc(50% - 20%);
+        background-color: var(--secondary-color);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding: 5%;
+    }
+
+    .profile_pic{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .account_info{
+        width: 500px;
+        height: 600px;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px 0px 0px 0px;
+    }

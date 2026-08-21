@@ -1,6 +1,6 @@
     import styles from './page.module.css';
     // import NewFlow from '@/components/lib_test/flow';
-    import SkillmapFlow from '@/components/skillMapFlow/skillmapFlow';
+    import SkillmapFlow from '@/components/organisms/skillMapFlow/skillmapFlow';
 
     const Page = () => {
         return (

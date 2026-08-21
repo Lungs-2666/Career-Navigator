@@ -1,0 +1,142 @@
+    'use client'
+
+    import styles from './styles.module.css';
+    import { useState } from 'react';
+    import { supabase } from '@/lib/supabaseClient';
+    import WavesBgComponent from '@/components/atoms/wavesBg/wavesBgComp';
+    import { useRouter } from 'next/navigation';
+
+    const SignUpPage = () => {
+        const router = useRouter();
+
+        const [ email, setEmail ] = useState('');
+        const [ password, setPassword ] = useState('');
+        const [ direction, setDirection ] = useState('');
+        const [ loading, setLoading ] = useState(false);
+        const [ error, setError ] = useState('');
+        const [ success, setSuccess ] = useState('');
+
+        const handleSignUp = async(e) => {
+            e?.preventDefault();
+            setError('');
+            setSuccess('');
+            setLoading(true);
+
+            try {
+                const { data, error: signUpError } = await supabase.auth.signUp({
+                    email,
+                    password
+                });
+
+                if(signUpError){
+                    setError(signUpError.message);
+                    return;
+                }
+
+                const user = data?.user;
+                if(!user){
+                    setError("Couldn't get user after signing up");
+                    return;
+                }
+
+
+                const { error: profileError } = await supabase
+                    .from('profiles')
+                    .insert({
+                        id: user.id,
+                        email,
+                        direction
+                    });
+
+                if(profileError){
+                    setError(profileError.message);
+                    return;
+                }
+
+                setSuccess('Account was successfully created');
+                setEmail('');
+                setPassword('');
+                setDirection('');
+            } catch (err) {
+                setError(err.message || 'Unknown error');
+            } finally {
+                setLoading(false);
+            };
+
+            return true;
+        };
+
+        const handleToLoginPage = async() => {
+            const isSignedUp = await handleSignUp();
+            
+            if( isSignedUp /*== true*/ ){
+                setTimeout(() => {
+                    router.push('/login');
+                }, 2000);
+            };
+        };
+
+        return (
+            <div className={styles.signup_page}>
+                <WavesBgComponent />
+
+                <main className={styles.signup_page_main}>
+                    <h1> Sign Up </h1>
+
+                    <form onSubmit={handleSignUp} className={styles.signup_form}> 
+                        <div className={styles.email_form_group}>
+                            <label>
+                                <input
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                    placeholder='Email'
+                                    className={styles.input}
+                                />
+                            </label>
+                        </div>
+
+                        <div className={styles.password_form_group}>
+                            <label>
+                                <input
+                                    type="password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                    placeholder='Password'
+                                    className={styles.input}
+                                />
+                            </label>
+                        </div>
+
+                        <div className={styles.direction_form_group}>
+                            <label>
+                                <input
+                                    type="text"
+                                    value={direction}
+                                    onChange={(e) => setDirection(e.target.value)}
+                                    placeholder="Your direction of study"
+                                    className={styles.input}
+                                />
+                            </label>
+                        </div>
+
+                        <button 
+                            type="submit"
+                            disabled={loading}
+                            className={styles.signup_btn}
+                            onClick={() => {handleToLoginPage()}}
+                        >
+                            {loading ? 'Creating...' : 'Sign up'}
+                        </button>
+                    </form>
+
+                    {error && <p style={{ color: 'red', marginTop: 12 }}>{error}</p>}
+                    {success && <p style={{ color: 'green', marginTop: 12 }}>{success}</p>}
+                </main>
+            </div> 
+        )
+    } 
+
+    export default SignUpPage;

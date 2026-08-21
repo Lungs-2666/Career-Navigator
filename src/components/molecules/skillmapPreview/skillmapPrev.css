@@ -1,5 +1,5 @@
     .skillmap_preview{
-        width: 35%;
+        width: 45%;
         height: 50%;
         
         border-radius: 30px;
@@ -24,7 +24,7 @@
         filter: blur(1.8);
         border-radius: 30px;
 
-        animation: PreviewBgMovement 50s linear infinite;
+        animation: PreviewBgMovement 240s linear infinite;
     }
 
     .skillmap_preview_link{
