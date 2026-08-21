@@ -31,6 +31,7 @@ const Page = () => {
                 })
                 .then((data) => {
                     setIsLoading(false)
+                    return setVacancies(data)
                 })
                 .catch((err) => {
                     console.error(err);
