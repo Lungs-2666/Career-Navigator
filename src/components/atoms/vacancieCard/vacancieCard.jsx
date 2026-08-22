@@ -1,11 +1,11 @@
 import './vacancieCard.css'
 import Link from 'next/link';
 
-const VacancieCard = ({ id, title, company, salaryMin, salaryMax, source, currency, description, skills, url, createdAt }) => {
+const VacancieCard = ({ id, title, company, salaryMin, salaryMax, source, currency, description, skillsForCard, url, createdAt }) => {
 
 
-    const visibleSkills = skills.length > 2 ? skills.slice(0, 2) : skills;
-    const moreSkills = skills.length > 2 ? skills.length - 2 : 0;
+    const visibleSkills = skillsForCard.length > 2 ? skillsForCard.slice(0, 2) : skillsForCard;
+    const moreSkills = skillsForCard.length > 2 ? skillsForCard.length - 2 : 0;
 
     return (
         <div className="vacancieCard">

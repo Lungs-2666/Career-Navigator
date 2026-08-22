@@ -57,7 +57,7 @@ function Page() {
                     </div>
                     <div className={styles.vacancieCardFooter}>
                         <div className={styles.vacancieCardSkillsContainer}>
-                            {vacancie.skills.map((skill) => {
+                            {vacancie.skillsForCard.map((skill) => {
                                 return (
                                     <span
                                         key={skill}
@@ -79,7 +79,7 @@ function Page() {
                     </div>
                 </div>
                 <Link
-                    href={'/'}
+                    href={`/vacancies/${id}/graph`}
                     className={styles.graphLink}
                 >
                     <button className={styles.graphBtn}> Граф навыков</button>

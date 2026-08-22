@@ -13,6 +13,9 @@ const Page = () => {
     const [vacancies, setVacancies] = useState([]);
     const [IsLoading, setIsLoading] = useState(false)
 
+    //временные данные
+    let spec = 'backend'
+
 
 
 
@@ -23,21 +26,41 @@ const Page = () => {
         } else {
             params.append("title", inputValue)
             const query = params.toString();
-            console.log(query)
+            console.log(query, 'query')
             fetch(`api/vacancies?${query}`)
                 .then((res) => {
-                    setIsLoading(true)
-                    return res.json()
+                    setIsLoading(true);
+                    return res.json();
                 })
                 .then((data) => {
-                    setIsLoading(false)
-                    return setVacancies(data)
+                    setIsLoading(false);
+                    return setVacancies(data);
                 })
                 .catch((err) => {
                     console.error(err);
                 })
         }
     }
+
+    useEffect(() => {
+        const params = new URLSearchParams();
+        params.append('title', spec)
+        const query = params.toString();
+        console.log(query, 'query')
+        fetch(`api/vacancies?${query}`)
+            .then((res) => {
+                setIsLoading(true);
+                return res.json();
+            })
+            .then((data) => {
+                setIsLoading(false)
+                return setVacancies(data);
+            })
+            .catch((err) => {
+                console.error(err);
+            })
+    }, [])
+
 
 
     return (
@@ -81,7 +104,8 @@ const Page = () => {
                                 key={item._id}
                                 title={item.title}
                                 company={item.company}
-                                skills={item.skills}
+                                skillsForGraph={item.skillsForGraph}
+                                skillsForCard={item.skillsForCard}
                                 salaryMin={item.salaryMin}
                                 salaryMax={item.salaryMax}
                                 createdAt={item.createdAt}
