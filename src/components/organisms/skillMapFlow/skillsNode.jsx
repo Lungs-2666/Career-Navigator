@@ -8,6 +8,8 @@
     const SkillsNode = ({ data }) => {
         const [ listItems, setListItems ] = useState(data.items);
 
+        
+
         return (
             <div className='skills_node'>
                 <Handle type='target' position={data?.handle_target || Position.Left}/>

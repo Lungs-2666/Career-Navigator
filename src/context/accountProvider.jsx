@@ -2,11 +2,13 @@
 
     import { createContext, useContext, useState, useEffect } from "react";
     import { supabase } from "@/lib/supabaseClient";
+    import { useRouter } from "next/navigation";
 
     const AccountContext = createContext();
 
     export function AccountProvider({ children }){
-        const [user, setUser] = useState({ email: '', direction: '' });
+        const router = useRouter();
+        const [user, setUser] = useState(null);
         const [loading, setLoading] = useState(true);
 
         useEffect(() => {
@@ -76,8 +78,14 @@
             }
         }, []);
 
+        const logout = async () => {
+            await supabase.auth.signOut({ scope: 'local' });
+            setUser(null);
+            router.push('/login');
+        }
+
         return (
-            <AccountContext.Provider value={{ user, loading, setUser }}>
+            <AccountContext.Provider value={{ user, loading, logout, setUser }}>
                 {children}
             </AccountContext.Provider>
         );

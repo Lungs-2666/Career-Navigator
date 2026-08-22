@@ -96,6 +96,7 @@
                     colorMode='dark'
                     onNodesChange={onNodesChange}
                     onEdgesChange={onEdgesChange}
+                    nodesDraggable={false}
                     // panOnDrag={false}
                     // panOnScroll={false}
                     fitView
