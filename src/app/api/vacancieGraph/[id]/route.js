@@ -1,6 +1,8 @@
 import { connectToDatabase } from "@/lib/mongo";
 import { ObjectId } from 'mongodb';
 
+
+console.log('start')
 export async function GET(req, { params }) {
     try {
         const { id } = await params;
@@ -38,7 +40,7 @@ export async function GET(req, { params }) {
             source: String(i + 1),
             target: String(i + 2),
         }));
-
+        console.log(Response.json({ nodes, edges }), 'rescponse')
         return Response.json({ nodes, edges });
     } catch (error) {
         console.log(error);

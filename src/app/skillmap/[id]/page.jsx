@@ -5,7 +5,8 @@ import SkillMapFlowVacancie from '@/components/organisms/skillMapFlowVacancie/sk
 
 const Page = () => {
 
-    const { id } = useParams;
+    const { id } = useParams();
+    console.log(id)
     return (
         <main className={styles.main}>
             <SkillMapFlowVacancie  vacancyId={id}></SkillMapFlowVacancie>
