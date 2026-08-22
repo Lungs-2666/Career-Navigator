@@ -31,7 +31,7 @@ function Page() {
 
     }, [id])
 
-    if (loading) return (<p style={{position:'absolute', zIndex: 1000}} >Поиск вакансии...</p>)
+    if (loading) return (<p style={{ position: 'absolute', zIndex: 1000 }} >Поиск вакансии...</p>)
 
     return (
         <div className={styles.page}>
@@ -79,7 +79,7 @@ function Page() {
                     </div>
                 </div>
                 <Link
-                    href={`/vacancies/${id}/graph`}
+                    href={`/skillmap/${id}`}
                     className={styles.graphLink}
                 >
                     <button className={styles.graphBtn}> Граф навыков</button>
