@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from './page.module.css'
 import { useParams } from 'next/navigation';
+import LoadingWindow from '@/components/atoms/loadingWindow/loadingWindow';
 import Link from 'next/link';
 
 function Page() {
@@ -31,7 +32,9 @@ function Page() {
 
     }, [id])
 
-    if (loading) return (<p style={{ position: 'absolute', zIndex: 1000 }} >Поиск вакансии...</p>)
+    if (loading) return (<LoadingWindow />)
+    if(!vacancie.ok) return 
+
 
     return (
         <div className={styles.page}>

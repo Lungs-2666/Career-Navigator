@@ -11,19 +11,20 @@
     "seed": "node scripts/seed.js",
     "test": "node scripts/test.js",
     "parse": "node scripts/runParser.js",
-    "test-parse":"node scripts/test-hh.js"
+    "test-parse": "node scripts/test-hh.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.3",
     "@xyflow/react": "^12.11.2",
+    "dotenv": "^17.4.2",
     "gsap": "^3.15.0",
     "lucide-react": "^1.23.0",
-    "dotenv": "^17.4.2",
     "mongodb": "^7.5.0",
     "next": "16.2.10",
     "ogl": "^1.0.11",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-loader-spinner": "^8.0.2"
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "1.0.0",

@@ -4,6 +4,7 @@ import styles from './page.module.css'
 import VacanCard from '@/components/atoms/vacanCard/vacanCard';
 import { useState, useEffect, use } from 'react';
 import VacancieCard from '@/components/atoms/vacancieCard/vacancieCard';
+import LoadingWindow from '@/components/atoms/loadingWindow/loadingWindow';
 
 const Page = () => {
 
@@ -11,7 +12,7 @@ const Page = () => {
 
     const [inputValue, setInputValue] = useState('');
     const [vacancies, setVacancies] = useState([]);
-    const [IsLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
 
     //временные данные
     let spec = 'backend'
@@ -67,7 +68,7 @@ const Page = () => {
         <div className={styles.page}
         >
 
-
+            {isLoading && <LoadingWindow />}
             <header className={styles.vacanciesHeader}>
 
                 <h1 className={styles.headerH1}
@@ -92,11 +93,11 @@ const Page = () => {
                 </div>
             </header>
             <main className={styles.vacanciesMain}>
-                {!IsLoading}
+
                 {vacancies.length === 0 ? (
                     <div className={styles.MainPContainer}>
                         <p className={styles.vacanciesMainP}>
-                            Здесь пока ничего нет :&lt;</p>
+                            Ничего не нашлось... :&lt;</p>
                     </div>) : (
                     vacancies.map((item) => {
                         return (
