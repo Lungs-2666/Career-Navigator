@@ -1,19 +1,41 @@
     'use client'
     
     import styles from './styles.module.css';
-    import { useState } from 'react';
+    import { useState, useEffect } from 'react';
     import { supabase } from '@/lib/supabaseClient';
     import WavesBgComponent from '@/components/atoms/wavesBg/wavesBgComp';
     import Link from 'next/link';
     import { useRouter } from 'next/navigation';
+    import { useAccount } from '@/context/accountProvider';
 
     const SignInPage = () => {
+        const { setUser, logout } = useAccount();
         const router = useRouter();
 
         const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
         const [direction, setDirection] = useState(null);
-        const [error, setError] = useState('');
+        const [error, setError] = useState(''); 
+        // const [userIsLogged, setUserIsLogged] = useState(false);
+
+        useEffect(() => {
+            // const supabaseKeys = Object.keys(localStorage).filter(k => k.startsWith('sb-'));
+            // supabaseKeys.forEach( k => localStorage.removeItem(k) );
+
+            if(logout){
+                localStorage.setItem('isLogged', 'false')
+
+                setUser(null);
+            }
+
+
+
+            const stored = localStorage.getItem('isLogged');
+
+            if(stored === 'true'){
+                router.push('/account');
+            }
+        }, [router]);
 
         const handleLogin = async(e) => {
             e?.preventDefault();
@@ -53,6 +75,7 @@
             setDirection(profiles.direction);
             console.log(direction);
 
+            localStorage.setItem('isLogged', 'true');
             return true;
         };
 
@@ -73,7 +96,7 @@
                 <main className={styles.login_page_main}>
                     <h1>Login</h1>
 
-                    <form onSubmit={handleLogin} className={styles.login_form}>
+                    <form onSubmit={async(e) => {e.preventDefault(); await handleLogin(e)}} className={styles.login_form}>
                         <div className={styles.email_group}>
                             <label>
                                 <input

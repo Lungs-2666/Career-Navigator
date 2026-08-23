@@ -9,7 +9,7 @@
     import WavesBgComponent from '@/components/atoms/wavesBg/wavesBgComp';
     
     const AccountPage = ({ profile_pic_src }) => {
-        const { user, loading } = useAccount();
+        const { user, loading, logout, } = useAccount();
         const router = useRouter();
 
         useEffect(() => {
@@ -20,6 +20,14 @@
 
         if (loading) {
             return <div>Loading...</div>;
+        }
+
+        if(!user){
+            return null;
+        }
+
+        const handleLogout = async() => {
+            await logout();   
         }
 
         return (
@@ -37,6 +45,13 @@
                         <span className={styles.info_email}> Email: {user.email} </span>
                         <span className={styles.info_direction}> Direction: {user.direction} </span>
                     </div>
+
+                    <button 
+                        className={styles.logout_btn} 
+                        onClick={() => {handleLogout()}}
+                    >
+                        Log out
+                    </button>
                 </main>
             </div>
         );
