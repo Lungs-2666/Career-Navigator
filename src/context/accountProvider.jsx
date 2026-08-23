@@ -79,7 +79,7 @@
         }, []);
 
         const logout = async () => {
-            await supabase.auth.signOut({ scope: 'local' });
+            await supabase.auth.signOut(); //{scope: 'local'}
             setUser(null);
             router.push('/login');
         }

@@ -97,7 +97,7 @@
                     onNodesChange={onNodesChange}
                     onEdgesChange={onEdgesChange}
                     nodesDraggable={false}
-                    // panOnDrag={false}
+                    panOnDrag={true}
                     // panOnScroll={false}
                     fitView
                 >
