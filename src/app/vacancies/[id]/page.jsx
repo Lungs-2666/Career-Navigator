@@ -4,6 +4,7 @@ import styles from './page.module.css'
 import { useParams } from 'next/navigation';
 import LoadingWindow from '@/components/atoms/loadingWindow/loadingWindow';
 import Link from 'next/link';
+import WavesBgComponent from '@/components/atoms/wavesBg/wavesBgComp';
 
 function Page() {
 
@@ -11,6 +12,7 @@ function Page() {
 
     const [vacancie, setVacancie] = useState({})
     const [loading, setLoading] = useState(true)
+    console.log('start')
     useEffect(() => {
         console.log(id, 'id')
         if (id) {
@@ -33,11 +35,12 @@ function Page() {
     }, [id])
 
     if (loading) return (<LoadingWindow />)
-    if(!vacancie.ok) return 
+    
 
 
     return (
         <div className={styles.page}>
+            <WavesBgComponent/>
             <main className={styles.main}>
 
                 <Link

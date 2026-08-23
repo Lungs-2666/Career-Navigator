@@ -1,11 +1,9 @@
 .page {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--foreground);
     display: flex;
     justify-content: center;
     position: absolute;
-
 
 }
 
@@ -17,7 +15,7 @@
     align-items: center;
     justify-content: center;
     gap: 4vh;
-
+    z-index: 100;
 }
 
 .vacancieCard {
