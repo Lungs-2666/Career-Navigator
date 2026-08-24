@@ -97,31 +97,24 @@
                     <h1>Login</h1>
 
                     <form onSubmit={async(e) => {e.preventDefault(); await handleLogin(e)}} className={styles.login_form}>
-                        <div className={styles.email_group}>
-                            <label>
-                                <input
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    placeholder='Email'
-                                    className={styles.input}
-                                />
-                            </label>
-                        </div>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                            placeholder='Email'
+                            className={styles.input}
+                        />
 
-                        <div className={styles.password_group}>
-                            <label>
-                                <input
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                    placeholder='Password'
-                                    className={styles.input}
-                                />
-                            </label>
-                        </div>
+                        
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                            placeholder='Password'
+                            className={styles.input}
+                        />
 
                         <button
                             type="submit"

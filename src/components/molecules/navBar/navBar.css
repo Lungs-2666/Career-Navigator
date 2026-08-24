@@ -55,3 +55,15 @@
                 transform: scale(1.3);
             }
     }
+
+
+
+    @media (max-width: 867px){
+        .nav_bar{
+            display: none;
+        }
+
+        .nav_bar_opened{
+            display: flex;
+        }
+    }

@@ -1,7 +1,7 @@
     .account_preview{
         width: 45%;
         height: 50%;
-        
+
         background-color: var(--foreground);
         border-radius: 30px;
         border: 4px solid var(--accent-color);
@@ -68,8 +68,8 @@
     }
 
     .account_preview_btn{
-        width: 80%;
-        height: 32px;
+        width: 100%;
+        height: 40px;
         background-color: var(--accent-color-2);
         color: var(--text-color);
         border-radius: 10px;
@@ -80,4 +80,56 @@
             &:active{
                 background-color: #a2aa45;
             }
+    }
+
+
+
+    @media (max-width: 867px){
+        .account_preview{
+            width: 100%;
+            height: auto;
+            min-height: 340px;
+            flex-shrink: 0;
+            padding: 10px 0px ;
+        }
+
+        .account_preview_main{
+            height: auto;
+            min-height: 270px;
+            padding: 10px 0px;
+
+        }
+
+        .account_preview_inputs{
+            height: auto;
+            gap: 10px;
+
+                & .inpt_prev_1, .inpt_prev_2, .inpt_prev_3{
+                    width: 100%;
+                }
+        }
+
+        .account_preview_btn{
+            height: 32px;
+        }
+    }
+
+    @media(max-width: 440px){
+        .account_preview_main{
+            min-height: 240px;
+            height: auto;
+        }
+
+        .account_preview_inputs{
+            padding: 0;
+            position: relative;
+
+                & .inpt_prev_1, .inpt_prev_2, .inpt_prev_3{
+                    width: 100%;
+                }
+        }
+
+        .account_preview_btn{
+            height: 28px;
+        }
     }

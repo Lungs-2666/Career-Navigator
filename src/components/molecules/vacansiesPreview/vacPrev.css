@@ -44,3 +44,19 @@
                 border-radius: 30px;
             } */
     }
+
+
+
+    @media (max-width: 867px){
+        .vacancies_preview_main{
+            width: 100%;
+            height: auto;
+            min-height: 380px;
+            flex-shrink: 0;
+        }
+
+        .vacancies_preview_cards{
+            height: auto;
+            min-height: 280px;
+        }
+    }

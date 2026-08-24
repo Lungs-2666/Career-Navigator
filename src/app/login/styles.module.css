@@ -13,29 +13,32 @@
     .login_page_main{
         width: 30%;
         height: 60%;
-        position: fixed;
+        /* position: fixed;
         top: calc(50% - 30%);
-        left: calc(50% - 15%);
+        left: calc(50% - 15%); */
         z-index: 15;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 100px;
-        padding: 5%;
         background-color: var(--secondary-color);
         color: var(--text-color-2);
         border-radius: 30px;
+        position: relative;
     }
 
     .login_form{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 20px;
+        width: 100%;
     }
 
     .input{
-        width: 350px;
+        width: 80%;
         height: 40px;
         border: none;
         outline: none;
@@ -44,7 +47,7 @@
     }
 
     .login_btn{
-        width: 350px;
+        width: 80%;
         height: 30px;
         margin-top: 20px;
         background-color: var(--accent-color-2);
@@ -66,4 +69,12 @@
         left: calc(50% - 100px);
         text-align: center;
         opacity: .2;
+    }
+
+
+
+    @media (max-width: 867px){
+        .login_page_main{
+            width: 80%;
+        }
     }

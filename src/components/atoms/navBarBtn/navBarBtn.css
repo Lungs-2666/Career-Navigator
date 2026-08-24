@@ -1,0 +1,32 @@
+    .nav_bar_btn{
+        width: 48px;
+        height: 48px;
+        border: 1px solid black;
+        background-color: var(--foreground);
+        
+        align-items: center;
+        justify-content: center;
+        
+        /* transition: all .2s ease; */
+
+        border-radius: 50%;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+
+        display: none;
+
+        /* transform: scale(-1); */
+
+            &:active{
+                background-color: #c7c5c1;
+            }
+    }
+
+
+    @media (max-width: 867px){
+        .nav_bar_btn{
+            display: flex;
+        }
+    }

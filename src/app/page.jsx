@@ -3,7 +3,6 @@
     import VacanciesPreview from "@/components/molecules/vacansiesPreview/vacPrev";
     import SkillmapPreview from "@/components/molecules/skillmapPreview/skillmapPrev";
     import AccountPreview from "@/components/molecules/accountPreview/accPrev";
-    import ResourcesPreview from "@/components/molecules/resourcesPreview/resPrev";
     import WavesBgComponent from "@/components/atoms/wavesBg/wavesBgComp";
 
 
@@ -17,8 +16,13 @@
                         <VacanciesPreview />
                         <SkillmapPreview />
                         <AccountPreview />
-                        {/* <ResourcesPreview /> */}
                     </div>
+
+                    {/* <div className={styles.snip_group_adaptive}>
+                        <VacanciesPreview />
+                        <SkillmapPreview />
+                        <AccountPreview />
+                    </div> */}
                 </main>
             </div>
         );

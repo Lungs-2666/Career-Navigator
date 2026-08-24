@@ -1,12 +1,33 @@
-    import './navBarBtn.css';
-    import { ChevronRight } from 'lucide-react';
+    'use client'
 
-    const NavBarBtn = () => {
+    import './navBarBtn.css';
+    import { ArrowUpRight, X } from 'lucide-react';
+    import { useState } from 'react';
+
+    const NavBarBtn = ({ onToggle }) => {
         //Opening function
+        const [clicked, setClicked] = useState(false);
 
         return (
-            <button onClick={() => {}}> {/* Will open NavBar on mobile*/}
-                <ChevronRight />
+            <button 
+                className='nav_bar_btn'
+                onClick={() => {onToggle(); setClicked(prev => !prev)}}
+            > {/* Will open NavBar on mobile*/}
+
+                {
+                    clicked ? 
+                    <X
+                        color='black'
+                        size={32}
+                        strokeWidth={1}
+                    /> :
+                    <ArrowUpRight
+                        color='black'
+                        size={32}
+                        strokeWidth={1}
+                    />
+                }
+                
             </button>
         )
     }
