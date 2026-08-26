@@ -80,10 +80,11 @@ const Page = () => {
 
                     <div className={styles.vacanciesSearchContainer}>
                         <div className={styles.vacanciesInputContainer}>
+                            <p className={styles.inpP}>🔎</p>
                             <input
                                 type="text"
                                 className={styles.vacanciesInput}
-                                placeholder='🔎 Введите профессию...'
+                                placeholder='Введите профессию...'
                                 onChange={(e) => {
                                     setInputValue(e.target.value)
                                 }}

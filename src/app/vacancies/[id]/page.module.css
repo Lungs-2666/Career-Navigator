@@ -209,13 +209,16 @@
     width: 320px;
     border-radius: 12px;
     border: none;
-    background: var(--primary-color);
+    background: var(--accent-color);
     transition: all 0.3s;
+    color: var(--text-color);
 }
 
 .graphBtn:hover {
     cursor: pointer;
     width: 330px;
-    background-color: var(--accent-color);
-    color: black;
+}
+.graphBtn:active{
+    color: var(--text-color-2);
+    background-color: var(--primary-color);
 }

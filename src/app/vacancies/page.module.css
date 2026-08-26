@@ -10,7 +10,7 @@
 .pageContainer {
     width: 100%;
     height: 100vh;
-        overflow-y: auto;
+    overflow-y: auto;
     z-index: 100;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .headerH1 {
-    color: var(--text-color);
+    color: var(--text-color2);
     font-weight: lighter;
     text-decoration: underline;
     text-underline-offset: 24px;
@@ -59,6 +59,7 @@
     background: none;
     border: none;
     color: var(--text-color);
+    font-size: 18px;
 }
 
 .vacanciesInput:focus {
@@ -71,7 +72,21 @@
     background-color: var(--primary-color);
     border: none;
     border-radius: 12px;
-    font-size: 1rem
+    font-size: 1rem;
+    transition: all 0.15s
+}
+
+.vacanciesInputBtn:hover {
+    cursor: pointer;
+
+    font-size: 1.1rem;
+    height: 110%;
+    width: calc(12% + 10px);
+}
+
+.vacanciesInputBtn:active {
+    background-color: var(--accent-color);
+    color: black;
 }
 
 .vacanciesMain {
