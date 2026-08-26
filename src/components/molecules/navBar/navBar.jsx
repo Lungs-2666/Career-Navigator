@@ -1,10 +1,13 @@
+    'use client'
+    
     import './navBar.css';
     import Link from 'next/link';
     import { House, BriefcaseBusiness, BookA, MapPinned, CircleUser, Settings } from 'lucide-react';
+    import { useState } from 'react';
     
-    const NavBar = () => {
+    const NavBar = ({ isOpen }) => {
         return (
-            <nav className='nav_bar'>
+            <nav className={`nav_bar ${isOpen ? 'nav_bar_opened' : ''}`}>
                 <div className='nav_bar_1'>
                     <Link href='/' className='nav_item' > <House color='#191314' size={24} strokeWidth={1.5} /> </Link>
                     <Link href='/vacancies' className="nav_item" > <BriefcaseBusiness color='#191314' size={24} strokeWidth={1.5}/> </Link>

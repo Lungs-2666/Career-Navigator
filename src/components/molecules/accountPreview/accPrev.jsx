@@ -14,9 +14,10 @@
                         <div className='inpt_prev_1'> <TextTypeComponent text={"your_emai123l@mail.com"} /> </div>
                         <div className='inpt_prev_2'> <TextTypeComponent text={"**********"}/> </div>
                         <div className='inpt_prev_3'> <TextTypeComponent text={["Frontend", "Backend", "Web-design"]} /> </div>
+                        
+                        <Link href="/sign-up" className='account_preview_btn'> Get started </Link>
                     </div>
 
-                    <Link href="/sign-up" className='account_preview_btn'> Get started </Link>
                 </div>
             </div>
         );

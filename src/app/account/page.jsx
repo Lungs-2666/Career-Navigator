@@ -27,7 +27,7 @@
         }
 
         const handleLogout = async() => {
-            await logout();   
+            await logout();
         }
 
         return (

@@ -81,46 +81,35 @@
                 <WavesBgComponent />
 
                 <main className={styles.signup_page_main}>
-                    <h1> Sign Up </h1>
+                    <h1 className={styles.signup_page_heading}> Sign Up </h1>
 
                     <form onSubmit={handleSignUp} className={styles.signup_form}> 
-                        <div className={styles.email_form_group}>
-                            <label>
-                                <input
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    placeholder='Email'
-                                    className={styles.input}
-                                />
-                            </label>
-                        </div>
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                placeholder='Email'
+                                className={styles.input}
+                            />
 
-                        <div className={styles.password_form_group}>
-                            <label>
-                                <input
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                    placeholder='Password'
-                                    className={styles.input}
-                                />
-                            </label>
-                        </div>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                                placeholder='Password'
+                                className={styles.input}
+                            />
 
-                        <div className={styles.direction_form_group}>
-                            <label>
-                                <input
-                                    type="text"
-                                    value={direction}
-                                    onChange={(e) => setDirection(e.target.value)}
-                                    placeholder="Your direction of study"
-                                    className={styles.input}
-                                />
-                            </label>
-                        </div>
+                        
+                            <input
+                                type="text"
+                                value={direction}
+                                onChange={(e) => setDirection(e.target.value)}
+                                placeholder="Your direction of study"
+                                className={styles.input}
+                            />
 
                         <button 
                             type="submit"
@@ -132,8 +121,8 @@
                         </button>
                     </form>
 
-                    {error && <p style={{ color: 'red', marginTop: 12 }}>{error}</p>}
-                    {success && <p style={{ color: 'green', marginTop: 12 }}>{success}</p>}
+                    {/* {error && <p style={{ color: 'red', marginTop: 12 }}>{error}</p>}
+                    {success && <p style={{ color: 'green', marginTop: 12 }}>{success}</p>} */}
                 </main>
             </div> 
         )

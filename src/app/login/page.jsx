@@ -9,33 +9,32 @@
     import { useAccount } from '@/context/accountProvider';
 
     const SignInPage = () => {
-        const { setUser, logout } = useAccount();
         const router = useRouter();
 
         const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
         const [direction, setDirection] = useState(null);
-        const [error, setError] = useState(''); 
-        // const [userIsLogged, setUserIsLogged] = useState(false);
+        const [error, setError] = useState('');
 
         useEffect(() => {
-            // const supabaseKeys = Object.keys(localStorage).filter(k => k.startsWith('sb-'));
-            // supabaseKeys.forEach( k => localStorage.removeItem(k) );
+            const handleSession = async() => {
+                const {data: {session}, error} = await supabase.auth.getSession();
 
-            if(logout){
-                localStorage.setItem('isLogged', 'false')
+                if(error){
+                    console.log(error)
+                }
 
-                setUser(null);
+                if(!session){
+                    console.log('No current sessions');
+                    return null;
+                } else {
+                    router.push('/account');
+                }
             }
 
-
-
-            const stored = localStorage.getItem('isLogged');
-
-            if(stored === 'true'){
-                router.push('/account');
-            }
+            handleSession();
         }, [router]);
+            
 
         const handleLogin = async(e) => {
             e?.preventDefault();
@@ -75,19 +74,20 @@
             setDirection(profiles.direction);
             console.log(direction);
 
-            localStorage.setItem('isLogged', 'true');
-            return true;
-        };
-
-        const handleToAccountPage = async() => {
-            const isLogged = await handleLogin();
-
-            if( isLogged ){
-                setTimeout(() => {
+            // localStorage.setItem('isLogged', 'true');
+            setTimeout(() => {
                     router.push('/account');
                 }, 2000);
-            };
+            // return true;
         };
+
+        // const handleToAccountPage = async() => {
+        //     const isLogged = await handleLogin();
+
+        //     if( isLogged ){
+                
+        //     };
+        // };
 
         return (
             <div className={styles.login_page}>
@@ -97,36 +97,29 @@
                     <h1>Login</h1>
 
                     <form onSubmit={async(e) => {e.preventDefault(); await handleLogin(e)}} className={styles.login_form}>
-                        <div className={styles.email_group}>
-                            <label>
-                                <input
-                                    type="email"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                    placeholder='Email'
-                                    className={styles.input}
-                                />
-                            </label>
-                        </div>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                            placeholder='Email'
+                            className={styles.input}
+                        />
 
-                        <div className={styles.password_group}>
-                            <label>
-                                <input
-                                    type="password"
-                                    value={password}
-                                    onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                    placeholder='Password'
-                                    className={styles.input}
-                                />
-                            </label>
-                        </div>
+                        
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                            placeholder='Password'
+                            className={styles.input}
+                        />
 
                         <button
                             type="submit"
                             className={styles.login_btn}
-                            onClick={() => {handleToAccountPage()}}
+                            // onClick={() => {handleToAccountPage()}}
                         >
                             Log in
                         </button>
