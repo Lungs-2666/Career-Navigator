@@ -8,14 +8,14 @@
 }
 
 .main {
-    width: 70%;
+    width: 90%;
     min-height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 4vh;
-    z-index: 100;
+    z-index: 10;
 }
 
 .vacancieCard {
@@ -221,4 +221,24 @@
 .graphBtn:active{
     color: var(--text-color-2);
     background-color: var(--primary-color);
+}
+
+@media (max-width:867px) {
+    .vacancieCard{
+        margin-top: 12px;
+        width: 350px;
+    }
+    .descriptionContainer{
+        max-width: 350px;
+        min-width: 350px;
+    }
+    .descriptionHeader{
+        font-size: 20px;
+    }
+    .line{
+        max-width: 350px;
+    }
+    .descriptionBorder{
+        max-width: 350px;
+    }
 }

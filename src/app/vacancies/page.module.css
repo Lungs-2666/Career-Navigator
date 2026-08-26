@@ -109,3 +109,20 @@
     left: calc(100vw - 64vw);
     top: calc(100vh - 60vh);
 }
+
+@media (max-width:867px) {
+
+    .vacanciesInputContainer {
+        width: 100%;
+    }
+    .vacanciesInput{
+        font-size: 14px;
+    }
+    .vacanciesInputBtn{
+        width: 25%;
+        font-size: 14px;
+    }
+    .headerH1{
+        font-size: 24px;
+    }
+}
