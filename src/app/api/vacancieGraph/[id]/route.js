@@ -10,21 +10,15 @@ export async function GET(req, { params }) {
 
         const { db } = await connectToDatabase();
 
-        // 1. Ищем вакансию
         const vacancy = await db.collection('vacancies').findOne({ _id: new ObjectId(id) });
         if (!vacancy) return Response.json({ error: 'Вакансия не найдена' }, { status: 404 });
 
-        // 2. Достаем нужные скиллы
         const skills = await db.collection('skills').find({ name: { $in: vacancy.skillsForGraph || [] } }).toArray();
         if (skills.length === 0) return Response.json({ nodes: [], edges: [], message: 'Скиллы не найдены' });
 
-        // 3. Группируем по категориям
         const grouped = {};
         skills.forEach(s => (grouped[s.category] = grouped[s.category] || []).push(s.name));
-
         const categories = Object.keys(grouped).sort();
-
-        // 4. Собираем ноды
         const nodes = categories.map((category, i) => ({
             id: String(i + 1),
             position: { x: i * 350, y: 0 },
@@ -34,13 +28,11 @@ export async function GET(req, { params }) {
             targetPosition: 'left',
         }));
 
-        // 5. Собираем связи
         const edges = categories.slice(1).map((_, i) => ({
             id: `e${i + 1}-${i + 2}`,
             source: String(i + 1),
             target: String(i + 2),
         }));
-        console.log(Response.json({ nodes, edges }), 'rescponse')
         return Response.json({ nodes, edges });
     } catch (error) {
         console.log(error);

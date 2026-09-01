@@ -1,23 +1,26 @@
 'use client'
 
 import styles from './page.module.css'
-import VacanCard from '@/components/atoms/vacanCard/vacanCard';
 import { useState, useEffect, use } from 'react';
 import VacancieCard from '@/components/atoms/vacancieCard/vacancieCard';
 import LoadingWindow from '@/components/atoms/loadingWindow/loadingWindow';
 import WavesBgComponent from '@/components/atoms/wavesBg/wavesBgComp';
+import { useAccount } from '@/context/accountProvider';
+
 
 const Page = () => {
 
-
+    const { user, loading, logout, } = useAccount()
 
     const [inputValue, setInputValue] = useState('');
     const [vacancies, setVacancies] = useState([]);
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    // const [direction, setDirection] = useState(user.direction)
 
-    //временные данные
-    let spec = 'backend'
 
+    // if (!user) {
+    //     return 'frontend';
+    // }
 
 
 
@@ -46,7 +49,8 @@ const Page = () => {
 
     useEffect(() => {
         const params = new URLSearchParams();
-        params.append('title', spec)
+        // setDirection(localStorage.getItem('direction'))
+        params.append('title', 'frontend')
         const query = params.toString();
         console.log(query, 'query')
         fetch(`api/vacancies?${query}`)
@@ -65,12 +69,14 @@ const Page = () => {
 
 
 
+
+
     return (
         <div className={styles.page}
         >
 
             <WavesBgComponent></WavesBgComponent>
-            {isLoading && <LoadingWindow />}
+            {isLoading || loading && <LoadingWindow />}
             <div className={styles.pageContainer}>
                 <header className={styles.vacanciesHeader}>
 
