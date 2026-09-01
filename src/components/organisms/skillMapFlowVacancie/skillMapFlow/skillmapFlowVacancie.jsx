@@ -1,7 +1,7 @@
 'use client'
 
 import './skillmapFlow.css';
-import { useState, useCallback, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAccount } from '@/context/accountProvider';
 import {
@@ -9,7 +9,6 @@ import {
     Background,
     useNodesState,
     useEdgesState,
-    Position,
     Controls,
     useReactFlow,
     ReactFlowProvider
@@ -19,15 +18,13 @@ import LinkNode from './linkNode';
 import DefaultNode from './defaultNode';
 import SkillsNode from './skillsNode';
 
-
-
 const nodeTypes = {
     link_node: LinkNode,
     default_node: DefaultNode,
     skills_node: SkillsNode
-}
+};
 
-function Flow() {
+function Flow({ vacancyId }) {
     const { user, loading } = useAccount();
     const { fitView } = useReactFlow();
     const router = useRouter();
@@ -35,46 +32,37 @@ function Flow() {
     const [nodes, setNodes, onNodesChange] = useNodesState([]);
     const [edges, setEdges, onEdgesChange] = useEdgesState([]);
 
+    useEffect(() => {
+        console.log('--- ОТЛАДКА НА КЛИЕНТЕ ---');
+        console.log('user:', !!user, 'loading:', loading, 'vacancyId:', vacancyId);
+        if (loading || !user || !vacancyId) return;
 
+        async function loadVacancyGraph() {
+            try {
+                const res = await fetch(`/api/vacancieGraph/${vacancyId}`);
+                const data = await res.json();
 
-    async function loadGraph() {
-        try {
-            const res = await fetch(`/api/graph?specialization=${user.direction}`);
-
-            const data = await res.json();
-
-            if (data.nodes && data.edges) {
-                setNodes(data.nodes);
-                setEdges(data.edges);
+                if (data.nodes && data.edges) {
+                    setNodes(data.nodes);
+                    setEdges(data.edges);
+                }
+            } catch (error) {
+                console.log('Ошибка загрузки графа вакансии:', error);
             }
-        } catch (error) {
-            console.log('ошибка загрузки файлов', error);
         }
-    }
 
+        loadVacancyGraph();
+    }, [user, loading, vacancyId, setNodes, setEdges]);
+
+    // Центрирование камеры
     useEffect(() => {
-        if (loading || !user) {
-            return;
-        }
-        loadGraph()
-
-
-    }, [user, loading, setNodes, setEdges]);
-
-    useEffect(() => {
-        if (nodes.length === 0) {
-            return;
-        }
-
+        if (nodes.length === 0) return;
         requestAnimationFrame(() => {
-            fitView({
-                padding: 0.2,
-                duration: 300,
-            });
+            fitView({ padding: 0.2, duration: 300 });
         });
     }, [nodes, fitView]);
 
-
+    // Защита роута
     useEffect(() => {
         if (!loading && !user) {
             router.push('/login');
@@ -94,23 +82,19 @@ function Flow() {
                 colorMode='dark'
                 onNodesChange={onNodesChange}
                 onEdgesChange={onEdgesChange}
-                // panOnDrag={false}
-                // panOnScroll={false}
                 fitView
             >
-                <Background
-                    bgColor='#ffffff'
-                />
+                <Background bgColor='#ffffff' />
                 <Controls position='right bottom' />
             </ReactFlow>
         </div>
     );
-};
+}
 
-export default function SkillMapFlow() {
+export default function SkillMapFlow({ vacancyId }) {
     return (
         <ReactFlowProvider>
-            <Flow />
+            <Flow vacancyId={vacancyId} />
         </ReactFlowProvider>
-    )
+    );
 }

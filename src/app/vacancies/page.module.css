@@ -1,0 +1,129 @@
+.page {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    padding-left: 10%;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.pageContainer {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.vacanciesHeader {
+    width: 100%;
+    height: 180px;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    z-index: 10;
+}
+
+.headerH1 {
+    color: var(--text-color2);
+    font-weight: lighter;
+    text-decoration: underline;
+    text-underline-offset: 24px;
+    text-decoration-thickness: 1.5px;
+}
+
+.vacanciesSearchContainer {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.vacanciesInputContainer {
+    width: 42%;
+    height: 100%;
+    border: 1px solid var(--accent-color);
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--background);
+    display: flex;
+
+}
+
+.vacanciesInput {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.vacanciesInput:focus {
+    outline: none;
+}
+
+.vacanciesInputBtn {
+    width: 12%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.15s
+}
+
+.vacanciesInputBtn:hover {
+    cursor: pointer;
+
+    font-size: 1.1rem;
+    height: 110%;
+    width: calc(12% + 10px);
+}
+
+.vacanciesInputBtn:active {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+.vacanciesMain {
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    z-index: 10;
+}
+
+.vacanciesMainP {
+    color: var(--text-color);
+    left: calc(100vw - 64vw);
+    top: calc(100vh - 60vh);
+}
+
+@media (max-width:867px) {
+
+    .vacanciesInputContainer {
+        width: 100%;
+    }
+    .vacanciesInput{
+        font-size: 14px;
+    }
+    .vacanciesInputBtn{
+        width: 25%;
+        font-size: 14px;
+    }
+    .headerH1{
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,118 @@
+    .main_flow{
+        width: 100vw;
+        height: 100svh;
+        position: fixed;
+        top: 0;
+    }
+    
+    .first_node{
+        border: 1px solid var(--secondary-color);
+        background-color: var(--foreground);
+        color: var(--text-color) !important;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        font-size: .9rem;
+
+            & .direction_select{
+                height: 25px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                font-size: .6rem;
+            }
+
+            & .direction_select:focus {
+                outline: none;
+            }
+
+            & .direction_select option{
+                background-color: var(--foreground);
+                color: var(--text-color);
+                font-size: 1rem;
+            }
+
+            & .first_node_btn{
+                background-color: var(--primary-color);
+                outline: none;
+                border: none;
+                height: 20px;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: all .1s ease;
+                font-size: .6rem;
+
+                    &:active{
+                        background-color: #5f917c;
+                    }
+            }
+
+            & .select_group{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+    }
+
+    .link_node{
+        border: 1px solid var(--secondary-color);
+        background-color: var(--foreground);
+        color: var(--text-color) !important;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        cursor: default;
+        min-width: 150px;
+        font-size: .9rem;
+
+            & .link_node_link{
+                color: var(--primary-color);
+                text-decoration: underline;
+                transition: all .2s ease;
+
+                    &:hover{
+                        color: #2d443b;
+                    }
+            }
+    }
+
+    .default_node{
+        border: 1px solid var(--secondary-color);
+        background-color: var(--foreground);
+        color: var(--text-color) !important;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        cursor: default;
+        min-width: 150px;
+        font-size: .9rem;
+        text-align: center;
+        align-content: center;
+    }
+
+    .skills_node{
+        border: 1px solid var(--secondary-color);
+        background-color: var(--foreground);
+        color: var(--text-color) !important;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        cursor: default;
+        min-width: 150px;
+        font-size: .9rem;
+        padding: 10px 30px;
+    }
+
+    .skills_node_label{
+        text-decoration: underline;
+        cursor: pointer;
+        /* color: #23bbcf; */
+    }

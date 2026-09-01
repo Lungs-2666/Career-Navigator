@@ -1,0 +1,58 @@
+.notFoundPage {
+    width: 100vw;
+    height: 100vh;
+    background-color: solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.h2 {
+    font-size: 24px;
+}
+
+.errorH1 {
+    font-size: 14rem;
+}
+
+.zero {
+    color: var(--primary-color);
+}
+
+.svg {
+    position: absolute;
+    z-index: -1;
+}
+
+.link {
+    width: 250px;
+    margin-top: 5vh;
+    padding: 20px;
+    background-color: var(--accent-color);
+    border-radius: 12px;
+    color: var(--text-color);
+    text-align: center;
+    transition: all 0.1s;
+}
+
+.link:hover {
+    width: 270px;
+}
+
+.link:active {
+    background-color: var(--primary-color);
+}
+
+@media(max-width:867px) {
+    .svg {
+        width: 380px;
+    }
+}

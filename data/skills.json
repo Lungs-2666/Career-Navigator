@@ -1,0 +1,987 @@
+[
+    {
+        "name": "Semantic HTML",
+        "category": "HTML",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Document Structure",
+        "category": "HTML",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Forms",
+        "category": "HTML",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Forms validation",
+        "category": "HTML",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Links",
+        "category": "HTML",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Images",
+        "category": "HTML",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Tables",
+        "category": "HTML",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Metadata",
+        "category": "HTML",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "HTML accessibility",
+        "category": "HTML",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Selectors",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Cascade",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Inheritance",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Box model",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Display",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Positioning",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Pseudo-classes",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "CSS variables",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Transitions",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Animations",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "SCSS",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Tailwind",
+        "category": "CSS",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Variables",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Data types",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Functions",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Arrays",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Objects",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Destructuring",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Spread operator",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Modules",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "DOM",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Events",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Promises",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Async/await",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Fetch API",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Error handling",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "TypeScript",
+        "category": "JavaScript",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Git",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "GitHub",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Accessibility",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Lazy loading",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "SEO",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Deployment",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Jest",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Cypress",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Vitest",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Jasmine",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Karma",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Storybook",
+        "category": "Quality",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "NodeJS",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "NPM",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Angular",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "React",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Next.js",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Vue.js",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Component Libraries",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Redux",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Vuex",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Pinia",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "RxJS",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Webpack",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Vite",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "REST API",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "GraphQL",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Docker",
+        "category": "Additionally",
+        "specialization": "Frontend"
+    },
+    {
+        "name": "Python",
+        "category": "Languages",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Java",
+        "category": "Languages",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Go",
+        "category": "Languages",
+        "specialization": "Backend"
+    },
+    {
+        "name": "PHP",
+        "category": "Languages",
+        "specialization": "Backend"
+    },
+    {
+        "name": "C#",
+        "category": "Languages",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Node.js",
+        "category": "Languages",
+        "specialization": "Backend"
+    },
+    {
+        "name": "FastAPI",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Django",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Spring Boot",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Laravel",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Express",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "NestJS",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "ASP.NET Core",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "SQLAlchemy",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Hibernate",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Pydantic",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "TypeORM",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Entity Framework",
+        "category": "Frameworks",
+        "specialization": "Backend"
+    },
+    {
+        "name": "PostgreSQL",
+        "category": "Databases",
+        "specialization": "Backend"
+    },
+    {
+        "name": "MongoDB",
+        "category": "Databases",
+        "specialization": "Backend"
+    },
+    {
+        "name": "MySQL",
+        "category": "Databases",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Redis",
+        "category": "Databases",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Mongoose",
+        "category": "Databases",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Microservices",
+        "category": "Architecture",
+        "specialization": "Backend"
+    },
+    {
+        "name": "SOAP",
+        "category": "Architecture",
+        "specialization": "Backend"
+    },
+    {
+        "name": "gRPC",
+        "category": "Architecture",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Unit Testing",
+        "category": "Testing",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Integration Testing",
+        "category": "Testing",
+        "specialization": "Backend"
+    },
+    {
+        "name": "PyTest",
+        "category": "Testing",
+        "specialization": "Backend"
+    },
+    {
+        "name": "JUnit",
+        "category": "Testing",
+        "specialization": "Backend"
+    },
+    {
+        "name": "PHPUnit",
+        "category": "Testing",
+        "specialization": "Backend"
+    },
+    {
+        "name": "OOP",
+        "category": "Quality",
+        "specialization": "Backend"
+    },
+    {
+        "name": "SOLID",
+        "category": "Quality",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Design Patterns",
+        "category": "Quality",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Kafka",
+        "category": "Additionally",
+        "specialization": "Backend"
+    },
+    {
+        "name": "RabbitMQ",
+        "category": "Additionally",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Celery",
+        "category": "Additionally",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Nginx",
+        "category": "Additionally",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Linux",
+        "category": "Additionally",
+        "specialization": "Backend"
+    },
+    {
+        "name": "CI/CD",
+        "category": "Additionally",
+        "specialization": "Backend"
+    },
+    {
+        "name": "Figma",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Photoshop",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Illustrator",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "After Effects",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Premiere Pro",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Cinema 4D",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Blender",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "ZBrush",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Lightroom",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Capture One",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Procreate",
+        "category": "Tools",
+        "specialization": "Designer"
+    },
+    {
+        "name": "User Research",
+        "category": "UX Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "User Journey",
+        "category": "UX Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Wireframing",
+        "category": "UX Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Prototyping",
+        "category": "UX Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Usability Testing",
+        "category": "UX Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Information Architecture",
+        "category": "UX Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Visual Design",
+        "category": "UI Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Typography",
+        "category": "UI Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Color Theory",
+        "category": "UI Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Grid Systems",
+        "category": "UI Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Responsive Design",
+        "category": "UI Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Design Systems",
+        "category": "UI Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Components",
+        "category": "UI Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Atomic Design",
+        "category": "UI Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Mobile Design",
+        "category": "UI Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Animation",
+        "category": "Motion Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Motion Graphics",
+        "category": "Motion Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Kinetic Typography",
+        "category": "Motion Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "2D Animation",
+        "category": "Motion Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "3D Animation",
+        "category": "Motion Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Compositing",
+        "category": "Motion Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Visual Effects",
+        "category": "Motion Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Video Editing",
+        "category": "Motion Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "3D Modeling",
+        "category": "3D Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Texturing",
+        "category": "3D Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Sculpting",
+        "category": "3D Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Rigging",
+        "category": "3D Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Lighting",
+        "category": "3D Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Rendering",
+        "category": "3D Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Photorealistic Rendering",
+        "category": "3D Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "High Poly",
+        "category": "3D Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Low Poly",
+        "category": "3D Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Brand Identity",
+        "category": "Graphic Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Logo Design",
+        "category": "Graphic Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Print Design",
+        "category": "Graphic Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Packaging",
+        "category": "Graphic Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Editorial Design",
+        "category": "Graphic Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Advertising",
+        "category": "Graphic Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Social Media Design",
+        "category": "Graphic Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Illustration",
+        "category": "Graphic Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Web Design",
+        "category": "Web Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Landing Pages",
+        "category": "Web Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "E-commerce",
+        "category": "Web Design",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Creative Thinking",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Art Direction",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Team Management",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Client Communication",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Presentation Skills",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Creative Concept",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Visual Strategy",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Design Leadership",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Studio Lighting",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Product Photography",
+        "category": "Additionally",
+        "specialization": "Designer"
+    },
+    {
+        "name": "Kubernetes",
+        "category": "Containerization",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Docker",
+        "category": "Containerization",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Helm",
+        "category": "Containerization",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Container Orchestration",
+        "category": "Containerization",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Terraform",
+        "category": "Infrastructure as Code",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Ansible",
+        "category": "Infrastructure as Code",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Jenkins",
+        "category": "CI/CD",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "GitHub Actions",
+        "category": "CI/CD",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "GitLab CI",
+        "category": "CI/CD",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "CircleCI",
+        "category": "CI/CD",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "AWS",
+        "category": "Cloud Providers",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Yandex Cloud",
+        "category": "Cloud Providers",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "VK Cloud",
+        "category": "Cloud Providers",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "SberCloud",
+        "category": "Cloud Providers",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Azure",
+        "category": "Cloud Providers",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Prometheus",
+        "category": "Monitoring",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Grafana",
+        "category": "Monitoring",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "ELK Stack",
+        "category": "Monitoring",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "TCP/IP",
+        "category": "Networking",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "DNS",
+        "category": "Networking",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Load Balancing",
+        "category": "Networking",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Python",
+        "category": "Scripting",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Bash",
+        "category": "Scripting",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Go",
+        "category": "Scripting",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Linux",
+        "category": "Linux",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "System Administration",
+        "category": "Linux",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "Git",
+        "category": "Version Control",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "GitHub",
+        "category": "Version Control",
+        "specialization": "DevOps"
+    },
+    {
+        "name": "GitLab",
+        "category": "Version Control",
+        "specialization": "DevOps"
+    }
+]

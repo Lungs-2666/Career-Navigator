@@ -6,8 +6,7 @@
         return (
             <main className={styles.main}>
                 {/* <NewFlow /> */}
-
-                <SkillmapFlow />
+                <SkillmapFlow  />
             </main>
         )
     }
