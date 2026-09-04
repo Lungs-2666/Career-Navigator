@@ -64,7 +64,7 @@ const VacanciesPreview = () => {
 
     return (
         <div className="vacancies_preview_main">
-            <Link href='/vacancies' className='vacancies_preview_link'> Vacancies {">>"} </Link>
+            <Link href='/vacancies' className='vacancies_preview_link'> Вакансии {">>"} </Link>
 
             <div className='vacancies_preview_cards'>
                 {vacPreview.map((item) => {

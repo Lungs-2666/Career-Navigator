@@ -101,7 +101,7 @@
                 <WavesBgComponent />
 
                 <main className={styles.login_page_main}>
-                    <h1>Login</h1>
+                    <h1> Вход </h1>
 
                     <form onSubmit={async(e) => {e.preventDefault(); await handleLogin(e)}} className={styles.login_form}>
                         <input
@@ -119,7 +119,7 @@
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
-                            placeholder='Password'
+                            placeholder='Пароль'
                             className={styles.input}
                         />
 
@@ -128,11 +128,11 @@
                             className={styles.login_btn}
                             // onClick={() => {handleToAccountPage()}}
                         >
-                            Log in
+                            Войти
                         </button>
                         
                         
-                        <Link href='/sign-up' className={styles.no_acc_link}> Don't have an account? </Link>
+                        <Link href='/sign-up' className={styles.no_acc_link}> Ещё нет аккаунта? </Link>
                     </form>
 
                     {/* {error && <p style={{ color: 'red', marginTop: 12 }}>{error}</p>} */}

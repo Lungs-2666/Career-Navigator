@@ -81,7 +81,7 @@
                 <WavesBgComponent />
 
                 <main className={styles.signup_page_main}>
-                    <h1 className={styles.signup_page_heading}> Sign Up </h1>
+                    <h1 className={styles.signup_page_heading}> Регистрация </h1>
 
                     <form onSubmit={handleSignUp} className={styles.signup_form}> 
                             <input
@@ -98,7 +98,7 @@
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
-                                placeholder='Password'
+                                placeholder='Пароль'
                                 className={styles.input}
                             />
 
@@ -107,7 +107,7 @@
                                 type="text"
                                 value={direction}
                                 onChange={(e) => setDirection(e.target.value)}
-                                placeholder="Your direction of study"
+                                placeholder="Направление в обучении"
                                 className={styles.input}
                             />
 
@@ -117,7 +117,7 @@
                             className={styles.signup_btn}
                             onClick={() => {handleToLoginPage()}}
                         >
-                            {loading ? 'Creating...' : 'Sign up'}
+                            {loading ? 'Создание...' : 'Зарегистрироваться'}
                         </button>
                     </form>
 

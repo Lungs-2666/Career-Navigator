@@ -19,7 +19,7 @@
         }, [user, loading, router]);
 
         if (loading) {
-            return <div>Loading...</div>;
+            return <div>Загрузка...</div>;
         }
 
         if(!user){
@@ -35,22 +35,24 @@
                 <WavesBgComponent />
 
                 <main className={styles.account_page_main}>
+                    <div className={styles.profile_card_bg}></div>
+
                     <img
-                        src={profile_pic_src || '/globe.svg'}
+                        src={profile_pic_src || '/user.png'}
                         alt="profile_picture"
                         className={styles.profile_pic}
                     />
 
                     <div className={styles.account_info}>
-                        <span className={styles.info_email}> Email: {user.email} </span>
-                        <span className={styles.info_direction}> Direction: {user.direction} </span>
+                        <span className={styles.info_email}> Email: <br /> <br /> {user.email} </span>
+                        <span className={styles.info_direction}> Направление: <br /> <br /> {user.direction} </span>
                     </div>
 
                     <button 
                         className={styles.logout_btn} 
                         onClick={() => {handleLogout()}}
                     >
-                        Log out
+                        Выход
                     </button>
                 </main>
             </div>

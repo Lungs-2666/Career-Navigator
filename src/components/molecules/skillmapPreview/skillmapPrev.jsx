@@ -10,15 +10,15 @@
                         href='/skillmap'
                         className='skillmap_preview_link'
                     >
-                        Skillmap {">>"} 
+                        Карта навыков {">>"} 
                     </Link>
 
                     <div className='skillmap_preview_text'>
-                        <h3> Advance and improve your skills with our new skillmap system </h3>
+                        <h3> Развивайте и совершенствуйте свои навыки! </h3>
                         <p>
-                            Interactive visual roadmaps that guide your learning,
-                            highlight your next steps,
-                            and help you track progress as you grow.
+                            Интерактивные визуальные карты для продвижения, которые направляют ваше обучение,
+                            подсказывают следующие шаги
+                            и помогают отслеживать прогресс по мере вашего роста
                         </p>
                     </div>
             </div>
