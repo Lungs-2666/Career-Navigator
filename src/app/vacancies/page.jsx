@@ -16,17 +16,40 @@ const Page = () => {
     const [inputValue, setInputValue] = useState('');
     const [vacancies, setVacancies] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [userDirection, setUserDirection] = useState(user.direction);
 
-    console.log(user.direction);
-    setUserDirection(user.direction);
+    // const [userDirection, setUserDirection] = useState(user.direction);
 
+    // console.log(user.direction);
+    // setUserDirection(user.direction);
+
+
+    async function getUserDirection() {
+        if (!loading) {
+            try {
+                const params = new URLSearchParams();
+                params.append('title', user.direction);
+                const query = params.toString();
+                // console.log(query, 'query');
+
+                // console.log(userDirection);
+                const res = await fetch(`api/vacancies?${query}`)
+                const data = await res.json()
+                setVacancies(data);
+                console.log(data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+
+
+    }
 
     if (!user) {
         console.log('No logged session');
         router.push('/login');
     }
-    
+
 
 
     function getData(inputValue) {
@@ -53,30 +76,8 @@ const Page = () => {
     }
 
     useEffect(() => {
-        const params = new URLSearchParams();
-        
-        params.append('title', userDirection);
-        const query = params.toString();
-        // console.log(query, 'query');
-
-        // console.log(userDirection);
-
-        
-        fetch(`api/vacancies?${query}`)
-            .then((res) => {
-                setIsLoading(true);
-                
-                return res.json();
-            })
-            .then((data) => {
-                setIsLoading(false);
-                console.log(direction);
-                return setVacancies(data);
-            })
-            .catch((err) => {
-                console.error(err);
-            })
-    }, [userDirection])
+        getUserDirection();
+    }, [])
 
 
 
