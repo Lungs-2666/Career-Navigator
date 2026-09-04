@@ -10,6 +10,7 @@
 
     const SignInPage = () => {
         const router = useRouter();
+        const { setUser } = useAccount();
 
         const [email, setEmail] = useState('');
         const [password, setPassword] = useState('');
@@ -74,10 +75,16 @@
             setDirection(profiles.direction);
             console.log(direction);
 
+            setUser({
+                email: user.email,
+                direction: profiles.direction ?? ''
+            });
+
+            router.push('/account');
+
             // localStorage.setItem('isLogged', 'true');
-            setTimeout(() => {
-                    router.push('/account');
-                }, 2000);
+            // setTimeout(() => {
+                // }, 2000);
             // return true;
         };
 

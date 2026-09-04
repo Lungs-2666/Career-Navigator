@@ -49,28 +49,31 @@
 
             getSession();
 
-            const {data: subscription} = supabase.auth.onAuthStateChange(async(event, session) => {
-                if(!session?.user){
-                    setUser(null);
+            const {data: subscription} = supabase.auth.onAuthStateChange((event, session) => {
+                setTimeout(async() => {
+                    if(!session?.user){
+                        setUser(null);
+                        setLoading(false);
+                        return;
+                    }
+    
+                    const authUser = session.user;
+    
+                    const {data: profile} = await supabase
+                        .from('profiles')
+                        .select('direction')
+                        .eq('id', authUser.id)
+                        .single();
+    
+                    setUser({
+                        // id: authUser.id
+                        email: profile?.email || authUser.email,
+                        direction: profile?.direction ?? ''
+                    });
+    
                     setLoading(false);
-                    return;
-                }
-
-                const authUser = session.user;
-
-                const {data: profile} = await supabase
-                    .from('profiles')
-                    .select('direction')
-                    .eq('id', authUser.id)
-                    .single();
-
-                setUser({
-                    // id: authUser.id
-                    email: profile?.email || authUser.email,
-                    direction: profile?.direction ?? ''
-                });
-
-                setLoading(false);
+                }, 0)
+                
             });
 
             return() => {

@@ -2,6 +2,7 @@
 
 import styles from './page.module.css'
 import { useState, useEffect, use } from 'react';
+import { useRouter } from 'next/navigation';
 import VacancieCard from '@/components/atoms/vacancieCard/vacancieCard';
 import LoadingWindow from '@/components/atoms/loadingWindow/loadingWindow';
 import WavesBgComponent from '@/components/atoms/wavesBg/wavesBgComp';
@@ -9,19 +10,23 @@ import { useAccount } from '@/context/accountProvider';
 
 
 const Page = () => {
-
-    const { user, loading, logout, } = useAccount()
+    const router = useRouter();
+    const { user, loading } = useAccount();
 
     const [inputValue, setInputValue] = useState('');
     const [vacancies, setVacancies] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    // const [direction, setDirection] = useState(user.direction)
+    const [userDirection, setUserDirection] = useState(null);
 
+    console.log(user.direction);
 
-    // if (!user) {
-    //     return 'frontend';
-    // }
+    // setUserDirection(user.direction);
 
+    if (!user) {
+        console.log('No logged session');
+        router.push('/login');
+    }
+    
 
 
     function getData(inputValue) {
@@ -49,23 +54,29 @@ const Page = () => {
 
     useEffect(() => {
         const params = new URLSearchParams();
-        // setDirection(localStorage.getItem('direction'))
-        params.append('title', 'frontend')
+        
+        params.append('title', userDirection);
         const query = params.toString();
-        console.log(query, 'query')
+        // console.log(query, 'query');
+
+        // console.log(userDirection);
+
+        
         fetch(`api/vacancies?${query}`)
             .then((res) => {
                 setIsLoading(true);
+                
                 return res.json();
             })
             .then((data) => {
-                setIsLoading(false)
+                setIsLoading(false);
+                console.log(direction);
                 return setVacancies(data);
             })
             .catch((err) => {
                 console.error(err);
             })
-    }, [])
+    }, [userDirection])
 
 
 

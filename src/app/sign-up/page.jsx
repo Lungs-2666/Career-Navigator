@@ -70,9 +70,9 @@
             const isSignedUp = await handleSignUp();
             
             if( isSignedUp /*== true*/ ){
-                setTimeout(() => {
+                // setTimeout(() => {
                     router.push('/login');
-                }, 2000);
+                // }, 2000);
             };
         };
 

@@ -56,9 +56,8 @@ function Flow() {
         if (loading || !user) {
             return;
         }
-        loadGraph()
 
-
+        loadGraph();
     }, [user, loading, setNodes, setEdges]);
 
     useEffect(() => {
