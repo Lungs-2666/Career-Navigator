@@ -61,9 +61,10 @@
         display: flex;
         font-size: 1.2rem;
         /* flex-direction: column; */
-        gap: 80px;
+        gap: 100px;
         padding: 20px 0px 0px 0px;
         z-index: 16;
+        position: relative; 
     }
 
     .logout_btn{
@@ -101,23 +102,40 @@
 
 
     @media (max-width: 867px){
+        .profile_card_bg{
+            background-color: var(--secondary-color);
+            background-image: var(--profile-bg);
+            background-size: 100%;
+
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            z-index: 15;
+            left: 0;
+            top: 0;
+        }
+
         .profile_pic{
             width: 50px;
             height: 50px;
-
         }
 
         .account_page_main{
             width: 80%;
-            height: 60%;
+            height: 40%;
+        }
+
+        .account_info{
+            font-size: 1rem;
+
+            flex-direction: column;
+            gap: 40px;
         }
 
         .logout_btn{
-            width: 100%;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: red;
+            width: 90px;
+            height: 28px;
+            border: 1px solid white;
+            font-size: .8rem;
         }
     }
