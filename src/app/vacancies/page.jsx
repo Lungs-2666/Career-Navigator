@@ -16,11 +16,11 @@ const Page = () => {
     const [inputValue, setInputValue] = useState('');
     const [vacancies, setVacancies] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [userDirection, setUserDirection] = useState(null);
+    const [userDirection, setUserDirection] = useState(user.direction);
 
     console.log(user.direction);
+    setUserDirection(user.direction);
 
-    // setUserDirection(user.direction);
 
     if (!user) {
         console.log('No logged session');
