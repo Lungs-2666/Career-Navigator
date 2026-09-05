@@ -1,0 +1,15 @@
+.skeletonDiv {
+    width: 19%;
+    min-width: 282px;
+    min-height: 320px;
+    padding: 20px;
+    border: 1px solid var(--accent-color);
+    border-left: 2px solid var(--primary-color);
+    border-radius: 0 12px 12px 0;
+    background-color: var(--background);
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
+}

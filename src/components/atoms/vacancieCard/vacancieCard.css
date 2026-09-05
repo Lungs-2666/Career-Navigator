@@ -1,7 +1,7 @@
 .vacancieCard {
     width: 19%;
     min-width: 282px;
-    min-height: 350px;
+    min-height: 320px;
     padding: 20px;
     border: 1px solid var(--accent-color);
     border-left: 2px solid var(--primary-color);
@@ -69,6 +69,7 @@
     align-items: center;
     justify-content: center;
     font-size: 12px;
+    color: var(--text-color-2);
 }
 
 .vacancieCardSkillMore {

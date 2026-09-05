@@ -7,6 +7,7 @@ import VacancieCard from '@/components/atoms/vacancieCard/vacancieCard';
 import LoadingWindow from '@/components/atoms/loadingWindow/loadingWindow';
 import WavesBgComponent from '@/components/atoms/wavesBg/wavesBgComp';
 import { useAccount } from '@/context/accountProvider';
+import { supabase } from '@/lib/supabaseClient';
 
 
 const Page = () => {
@@ -15,44 +16,41 @@ const Page = () => {
 
     const [inputValue, setInputValue] = useState('');
     const [vacancies, setVacancies] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
-    // const [userDirection, setUserDirection] = useState(user.direction);
-
-    // console.log(user.direction);
-    // setUserDirection(user.direction);
 
 
     async function getUserDirection() {
+        console.log("start")
         if (!loading) {
             try {
+                console.log("try")
                 const params = new URLSearchParams();
                 params.append('title', user.direction);
                 const query = params.toString();
-                // console.log(query, 'query');
+                console.log(query, 'query')
 
-                // console.log(userDirection);
                 const res = await fetch(`api/vacancies?${query}`)
                 const data = await res.json()
                 setVacancies(data);
-                console.log(data)
             } catch (error) {
                 console.log(error)
             }
+        } else {
+            console.log(loading)
         }
 
 
 
     }
 
-    if (!user) {
-        console.log('No logged session');
-        router.push('/login');
-    }
+
+
 
 
 
     function getData(inputValue) {
+        console.log('start')
         const params = new URLSearchParams();
         if (inputValue == '') {
             alert('Введите текст!!!')
@@ -62,7 +60,6 @@ const Page = () => {
             console.log(query, 'query')
             fetch(`api/vacancies?${query}`)
                 .then((res) => {
-                    setIsLoading(true);
                     return res.json();
                 })
                 .then((data) => {
@@ -72,6 +69,7 @@ const Page = () => {
                 .catch((err) => {
                     console.error(err);
                 })
+
         }
     }
 
@@ -79,8 +77,28 @@ const Page = () => {
         getUserDirection();
     }, [])
 
+    useEffect(() => {
+        const handleSession = async () => {
+            const { data: { session }, error } = await supabase.auth.getSession();
 
+            if (error) {
+                console.log(error)
+            }
 
+            if (!session) {
+                router.push("/login")
+            }
+            if (session && loading) {
+                return <LoadingWindow />
+            }
+        }
+
+        handleSession();
+    }, [router]);
+
+    // if (!user) {
+    //     router.push('/login');
+    // }
 
 
     return (
@@ -94,7 +112,7 @@ const Page = () => {
 
 
                     <h1 className={styles.headerH1}
-                    >Vacancies &gt;&gt;</h1>
+                    >Вакансии &gt;&gt;</h1>
 
                     <div className={styles.vacanciesSearchContainer}>
                         <div className={styles.vacanciesInputContainer}>

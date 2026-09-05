@@ -82,19 +82,10 @@
 
             router.push('/account');
 
-            // localStorage.setItem('isLogged', 'true');
-            // setTimeout(() => {
-                // }, 2000);
-            // return true;
+         
         };
 
-        // const handleToAccountPage = async() => {
-        //     const isLogged = await handleLogin();
-
-        //     if( isLogged ){
-                
-        //     };
-        // };
+    
 
         return (
             <div className={styles.login_page}>
