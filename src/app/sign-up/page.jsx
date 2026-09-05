@@ -82,7 +82,7 @@ const SignUpPage = () => {
             <WavesBgComponent />
 
             <main className={styles.signup_page_main}>
-                <h1 className={styles.signup_page_heading}> Sign Up </h1>
+                <h1 className={styles.signup_page_heading}> Регистрация </h1>
 
                 <form onSubmit={handleSignUp} className={styles.signup_form}>
                     <input
@@ -99,7 +99,7 @@ const SignUpPage = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
-                        placeholder='Password'
+                        placeholder='Пароль'
                         className={styles.input}
                     />
 
@@ -108,7 +108,7 @@ const SignUpPage = () => {
                         type="text"
                         value={direction}
                         onChange={(e) => setDirection(e.target.value)}
-                        placeholder="Your direction of study"
+                        placeholder="Направление в обучении"
                         className={styles.input}
                     />
 
@@ -118,9 +118,12 @@ const SignUpPage = () => {
                         className={styles.signup_btn}
                         onClick={() => { handleToLoginPage() }}
                     >
-                        {loading ? 'Creating...' : 'Sign up'}
+                        {loading ? 'Создание...' : 'Зарегистрироваться'}
                     </button>
                 </form>
+
+
+
 
                 {/* {error && <p style={{ color: 'red', marginTop: 12 }}>{error}</p>}
                     {success && <p style={{ color: 'green', marginTop: 12 }}>{success}</p>} */}

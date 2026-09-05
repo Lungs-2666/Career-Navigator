@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './page.module.css'
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import VacancieCard from '@/components/atoms/vacancieCard/vacancieCard';
 import LoadingWindow from '@/components/atoms/loadingWindow/loadingWindow';
