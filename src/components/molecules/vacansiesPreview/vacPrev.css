@@ -20,7 +20,7 @@
         position: absolute;
         top: 20px;
         left: 20px;
-        color: var(--text-color-2);
+        color: var(--text-color);
     }
 
     .vacancies_preview_cards{

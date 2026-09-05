@@ -3,63 +3,47 @@
 import './vacPrev.css';
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import SkeletonCard from '../skeletonCards/skeletonCards';
 
 import VacancieCard from '@/components/atoms/vacancieCard/vacancieCard';
 
-// const test_cards = [
-//     {
-//         id: 1,
-//         title: 'card_test',
-//         pay: '$100/month',
-//         logo: '/logos/logo_1',
-//         link: '/vacancie/1'
-//     },
-//     {
-//         id: 2,
-//         title: 'card_test',
-//         pay: '$100/month',
-//         logo: '/logos/logo_1',
-//         link: '/vacancie/1'
-//     },
-//     {
-//         id: 3,
-//         title: 'card_test',
-//         pay: '$100/month',
-//         logo: '/logos/logo_1',
-//         link: '/vacancie/1'
-//     },
-//     {
-//         id: 4,
-//         title: 'card_test',
-//         pay: '$100/month',
-//         logo: '/logos/logo_1',
-//         link: '/vacancie/1'
-//     },
-//     {
-//         id: 5,
-//         title: 'card_test',
-//         pay: '$100/month',
-//         logo: '/logos/logo_1',
-//         link: '/vacancie/1'
-//     }
-// ];
+
 
 const VacanciesPreview = () => {
     const [vacPreview, setVacPreview] = useState([]); //First 4-5 vacansies
-
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         fetch(`api/vacancies`)
             .then((res) => {
+                if (!res.ok) throw new Error('Failed to fetch data')
                 return res.json();
             })
             .then((data) => {
+                setLoading(false)
                 return setVacPreview(data);
             })
             .catch((err) => {
                 console.error(err);
             })
-    },[])
+    }, [])
+
+
+    if (loading) {
+        return (
+            <div className="vacancies_preview_main">
+                <Link href='/vacancies' className='vacancies_preview_link'> Загрузка {">>"} </Link>
+
+                <div className='vacancies_preview_cards'>
+                    {[1, 2, 3, 4, 5].map((item) => {
+                        return (
+                            <SkeletonCard loading={loading} key={item} />
+                        );
+                    })}
+                </div>
+            </div>
+        )
+    }
 
 
     return (
