@@ -30,4 +30,9 @@ npm run dev
 - ReactFlow
 - ReactBits
 
-## 
+## Project Structure:
+- /app - navigation
+- /components - components
+- /context - context provider
+- /lib - Supabase and MongoDB initialisation
+- /data - vacancies & skillmap data
