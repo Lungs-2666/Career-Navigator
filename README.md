@@ -1,9 +1,9 @@
-- `project/`
-  - [`README.md`](README.md)
-  - [`.env.example`](.env.example)
-  - `docx/`
-    - [`GUIDE.md`](GUIDE.md)
-    - [`FAQ.md`](FAQ.md)
+- project/
+  - [README.md](README.md)
+  - [.env.example](.env.example)
+  - docx/
+    - [GUIDE.md](GUIDE.md)
+    - [FAQ.md](FAQ.md)
 
 # Career Navigator
 A fullstack application for programmers and designers to improve their skills.
