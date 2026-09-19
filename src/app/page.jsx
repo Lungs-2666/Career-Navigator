@@ -17,12 +17,6 @@
                         <SkillmapPreview />
                         <AccountPreview />
                     </div>
-
-                    {/* <div className={styles.snip_group_adaptive}>
-                        <VacanciesPreview />
-                        <SkillmapPreview />
-                        <AccountPreview />
-                    </div> */}
                 </main>
             </div>
         );
