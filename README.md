@@ -36,3 +36,11 @@ npm run dev
 - /context - context provider
 - /lib - Supabase and MongoDB initialisation
 - /data - vacancies & skillmap data
+
+## Developers
+- Lungs-2666
+  
+  Github: https://github.com/Lungs-2666
+- LirWe786
+  
+  Github: https://github.com/LirWe786
