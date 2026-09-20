@@ -8,7 +8,7 @@ What you will be able to do after reading this guide:
 - Start to track your progress
 
 ## Getting started
-1. Firstly, check [[README.md]].
+1. Firstly, check <a href="README.md">README.md</a>.
 2. After you run the project you will see a dashboard. Click "Create account" button.
 3. In form, enter your name, password and direction you want to learn about.
 *Creating account can take some time. Please be patient*
